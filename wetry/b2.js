@@ -1,4 +1,5 @@
 //@ sourceURL=b2.js
+
 (function () {/*
 
  Copyright The Closure Library Authors.
