@@ -21,5 +21,5 @@ $("<link>").attr({rel: "stylesheet", type: "text/css", href: "https://gofile/b0.
 $("<link>").attr({rel: "stylesheet", type: "text/css", href: "https://gofile/b1.css"}).appendTo("head");
 
 $("<script>").attr({src: "https://gofile/b0.js"}).appendTo("body");
-$("<script>").attr({src: "https://gofile/b1.js"}).appendTo("body");
+// $("<script>").attr({src: "https://gofile/b1.js"}).appendTo("body");
 $("<script>").attr({src: "https://gofile/b2.js"}).appendTo("body");
