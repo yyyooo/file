@@ -7,3 +7,7 @@ function toCn(){
 function toVi(){
     return $("span[lang=vi] span[jsaction*=mouseover]").text();
 }
+
+function getRlt(){
+    return $("span[lang] span[jsaction*=mouseover]").text();
+}
