@@ -1,6 +1,6 @@
 //@ sourceURL=start.js
 
-Cookies.set('googtrans',"/auto/vi");
+Cookies.set('googtrans',"/auto/"+Cookies.get('mapp_language'));
 
 $("<div>").attr({id: "google_translate_element",style: "display: none;"}).appendTo("body");
 //$("<meta>").attr({"http-equiv": "Content-Security-Policy",content: "default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'"}).appendTo("head");
