@@ -1,7 +1,7 @@
 //@ sourceURL=weibo.js
 
-let pathname = window.location.pathname;
-if (pathname.startsWith("/login")) {
+let href = window.location.href;
+if (href.startsWith("https://m.weibo.cn/login")) {
     window.location.href = "https://weibo.com/login.php";
 }
 
