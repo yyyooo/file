@@ -1,7 +1,7 @@
 //@ sourceURL=zhihu.js
 $("<link>").attr({rel: "stylesheet", type: "text/css", href: "https://gofile/zhihu/zhihu.css"}).appendTo("head");
 
-var path=window.location.pathname;
+let path=window.location.pathname;
 if($(".Card.TopstoryItem").length>0||$(".List-item.NotLoggedInTopstoryItem").length>0){
     //列表首页
     addCss("https://gofile/zhihu/zhihu-list.css");
