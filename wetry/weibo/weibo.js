@@ -1,4 +1,4 @@
-//@ sourceURL=sina.js
+//@ sourceURL=weibo.js
 
 let path = window.location.pathname;
 if (path.startsWith("/login")) {
