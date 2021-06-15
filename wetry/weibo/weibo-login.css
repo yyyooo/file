@@ -1,19 +1,19 @@
-/*中部*/
-.WB_frame_c{
+/*底部全部*/
+.WB_main{
     display:none !important;
 }
 
-/*左部*/
-.UG_left_nav{
-  display:none !important;
-}
+/*!*中部*!*/
+/*.WB_frame_c{*/
+/*    display:none !important;*/
+/*}*/
 
-/*顶部*/
-.WB_global_nav{
-  display:none !important;
-}
+/*!*左部*!*/
+/*.UG_left_nav{*/
+/*  display:none !important;*/
+/*}*/
 
-/*右下*/
-#pl_unlogin_home_hots{
-    display:none !important;
-}
+/*!*右下*!*/
+/*#pl_unlogin_home_hots{*/
+/*    display:none !important;*/
+/*}*/
