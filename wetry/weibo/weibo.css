@@ -1,19 +1,13 @@
-/*!*底部全部*!*/
-/*.WB_main{*/
-/*    display:none !important;*/
-/*}*/
-
-/*!*中部*!*/
-/*.WB_frame_c{*/
-/*    display:none !important;*/
-/*}*/
-
-/*!*左部*!*/
-/*.UG_left_nav{*/
-/*  display:none !important;*/
-/*}*/
-
-/*!*右下*!*/
-/*#pl_unlogin_home_hots{*/
-/*    display:none !important;*/
-/*}*/
+/*登录页隐藏*/
+.verify-box .v-b-info{
+    display: none !important;
+}
+.verify-box .v-b-tit{
+    display: none !important;
+}
+.verify-box .input-box{
+    display: none !important;
+}
+.verify-box .m-btn{
+    display: none !important;
+}
