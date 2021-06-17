@@ -12,9 +12,3 @@ if($(".Card.TopstoryItem").length>0||$(".List-item.NotLoggedInTopstoryItem").len
     $(".Modal-closeButton").click();
 }
 
-function addCss(cssUrl){
-    $("<link>").attr({rel: "stylesheet", type: "text/css", href: cssUrl}).appendTo("head");
-}
-
-
-

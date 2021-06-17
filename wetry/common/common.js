@@ -10,3 +10,6 @@ function isEmpty(obj) {
     return typeof obj === 'undefined' || obj == null || obj === '';
 }
 
+function addCss(cssUrl){
+    $("<link>").attr({rel: "stylesheet", type: "text/css", href: cssUrl}).appendTo("head");
+}
