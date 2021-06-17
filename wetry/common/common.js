@@ -6,10 +6,12 @@ if (!isEmpty(redirectUrl)) {
     window.location.replace(redirectUrl);
 }
 
+$("meta[name='viewport']").attr("content", "width=device-width,minimum-scale=0.2,initial-scale=1,maximum-scale=5");
+
 function isEmpty(obj) {
     return typeof obj === 'undefined' || obj == null || obj === '';
 }
 
-function addCss(cssUrl){
+function addCss(cssUrl) {
     $("<link>").attr({rel: "stylesheet", type: "text/css", href: cssUrl}).appendTo("head");
 }
