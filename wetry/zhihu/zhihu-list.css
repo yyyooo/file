@@ -22,18 +22,18 @@
 /*.ContentItem-actions :nth-child(3){*/
 /*  display:none*/
 /*}*/
-.ContentItem-actions :nth-child(4){
+/*.ContentItem-actions :nth-child(4){
   display:none
 }
 .ContentItem-actions :nth-child(5){
   display:none
-}
-/*.ContentItem-actions :nth-child(6){
+}*/
+.ContentItem-actions :nth-child(6){
   display:none
 }
 .ContentItem-actions :nth-child(7){
   display:none
-}*/
+}
 
 /*.RichContent-inner{
   display:none
