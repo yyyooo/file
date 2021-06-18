@@ -17,3 +17,11 @@
 .OpenInAppButton{
     display:none
 }
+
+/*头部按键*/
+.AppHeader-Tabs :nth-child(1){
+    display:none
+}
+.AppHeader-Tabs :nth-child(2){
+    display:none
+}
