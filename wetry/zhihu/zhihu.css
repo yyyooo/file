@@ -36,3 +36,8 @@
 /*.AppHeader .AppHeader-profileEntry{*/
 /*    display:none*/
 /*}*/
+
+/*头像*/
+.AppHeader-profileEntry{
+    margin-right: 50px;
+}
