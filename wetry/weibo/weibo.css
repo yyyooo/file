@@ -11,6 +11,9 @@
 .verify-box .m-btn{
     display: none !important;
 }
+.refresh-btn{
+    display: none !important;
+}
 
 /*!*登录按键隐藏*!*/
 /*.login-box{*/
