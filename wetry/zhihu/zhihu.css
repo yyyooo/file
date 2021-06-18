@@ -19,7 +19,7 @@
 }
 
 /*头部按键*/
-.AppHeader-Tabs :nth-child(1){
+.AppHeader-inner>a:nth-child(1){
     display:none
 }
 .AppHeader-Tabs :nth-child(2){
