@@ -1,3 +1,8 @@
+/*广告*/
+.Pc-card{
+    display:none;
+}
+
 .MobileAppHeader-downloadLink{
     display:none
 }
