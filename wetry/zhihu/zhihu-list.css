@@ -6,9 +6,9 @@
 /*.ContentItem-actions :nth-child(3){*/
 /*  display:none*/
 /*}*/
-/*.ContentItem-actions :nth-child(4){*/
-/*  display:none*/
-/*}*/
+.ContentItem-actions :nth-child(4){
+  display:none
+}
 /*.ContentItem-actions :nth-child(5){*/
 /*  display:none*/
 /*}*/
