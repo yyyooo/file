@@ -1,5 +1,7 @@
 //@ sourceURL=zhihu.js
+
 $("<link>").attr({rel: "stylesheet", type: "text/css", href: "https://gofile/zhihu/zhihu.css"}).appendTo("head");
+$("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.55,maximum-scale=5");
 
 let pathname=window.location.pathname;
 if($(".Card.TopstoryItem").length>0||$(".List-item.NotLoggedInTopstoryItem").length>0){
