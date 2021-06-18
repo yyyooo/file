@@ -5,8 +5,9 @@
 .GlobalSideBar-category{
   display:none;
 }
-.GlobalWrite .GlobalWrite-topItem:nth-child(1){
-  display:none;
+.GlobalWrite-topItem{
+  margin-right:60px;
+  margin-left:20px;
 }
 
 /*!*所有按鍵图标*!*/
