@@ -6,8 +6,12 @@
   display:none;
 }
 .GlobalWrite-topItem{
-  margin-right:60px;
-  margin-left:20px;
+  margin-left: 100px !important;
+}
+
+/*动态header*/
+.TopstoryPageHeader{
+  display:none;
 }
 
 /*!*所有按鍵图标*!*/
