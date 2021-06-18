@@ -1,5 +1,8 @@
-/*pc侧边栏*/
-.GlobalSideBar{
+/*侧边栏的*/
+.CreatorEntrance{
+  display:none;
+}
+.GlobalSideBar-category{
   display:none;
 }
 
