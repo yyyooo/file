@@ -25,3 +25,6 @@
 .AppHeader-Tabs :nth-child(2){
     display:none
 }
+.AppHeader-Tabs .AppHeader-profileEntry{
+    display:none
+}
