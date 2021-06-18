@@ -6,7 +6,7 @@ if (!isEmpty(redirectUrl)) {
     window.location.replace(redirectUrl);
 }
 
-$("meta[name='viewport']").attr("content", "width=device-width,minimum-scale=0.2,initial-scale=0.5,maximum-scale=5");
+//$("meta[name='viewport']").attr("content", "width=device-width,minimum-scale=0.2,initial-scale=0.5,maximum-scale=5");
 
 function isEmpty(obj) {
     return typeof obj === 'undefined' || obj == null || obj === '';
