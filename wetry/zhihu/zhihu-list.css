@@ -1,3 +1,8 @@
+/*pc侧边栏*/
+.GlobalSideBar{
+  display:none;
+}
+
 /*!*所有按鍵图标*!*/
 /*.Button > span{*/
 /*    display:none !important;*/
