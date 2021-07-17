@@ -42,7 +42,7 @@
     margin-right: 50px;
 }
 
-/*按键的文字*/
-.ContentItem-actions button span{
+/*按键的空格*/
+button>span{
 	font-size: 0
 }
