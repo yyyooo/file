@@ -14,6 +14,12 @@
 .refresh-btn{
     display: none !important;
 }
+.ad-wrap{
+    display: none !important;
+}
+.card .wrap{
+    display: none !important;
+}
 
 /*!*登录按键隐藏*!*/
 /*.login-box{*/
