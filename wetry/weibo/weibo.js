@@ -17,6 +17,10 @@ function myPostInit() {
 }
 
 function checkLoginPage() {
+    if ($('.lite-iconf-profile').length > 0) {
+        return;
+    }
+
     let href = window.location.href;
     if (href === "https://m.weibo.cn/") {
         setTimeout(() => {
