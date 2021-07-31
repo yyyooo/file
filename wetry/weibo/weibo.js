@@ -21,7 +21,7 @@ function checkLoginPage() {
     if (href === "https://m.weibo.cn/") {
         setTimeout(() => {
             if (isLoginPage()) {
-                window.location.reload();
+                window.location.replace("https://m.weibo.cn/login");
             } else {
                 checkLoginPage()
             }
