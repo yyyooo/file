@@ -1,16 +1,16 @@
 /*登录页隐藏*/
-.verify-box .v-b-info{
-    display: none !important;
-}
-.verify-box .v-b-tit{
-    display: none !important;
-}
-.verify-box .input-box{
-    display: none !important;
-}
-.verify-box .m-btn{
-    display: none !important;
-}
+/*.verify-box .v-b-info{*/
+/*    display: none !important;*/
+/*}*/
+/*.verify-box .v-b-tit{*/
+/*    display: none !important;*/
+/*}*/
+/*.verify-box .input-box{*/
+/*    display: none !important;*/
+/*}*/
+/*.verify-box .m-btn{*/
+/*    display: none !important;*/
+/*}*/
 .refresh-btn{
     display: none !important;
 }
