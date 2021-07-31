@@ -11,12 +11,16 @@ function myPostInit() {
         return;
     }
 
+    checkLogin();
+}
+
+function checkLogin() {
+    dealLoginPage();
+
     let href = window.location.href;
     if (href === "https://m.weibo.cn/") {
-        setTimeout(() => dealLoginPage(), 1500);
+        setTimeout(() => checkLogin(), 1000);
     }
-
-    dealLoginPage();
 }
 
 function dealLoginPage() {
