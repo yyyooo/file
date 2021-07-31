@@ -20,6 +20,7 @@ function myPostInit() {
 }
 
 function dealLoginPage() {
+    let href = window.location.href;
     if (href.startsWith("https://m.weibo.cn/login") || $(".verify-box").length > 0) {
         //手机号无需翻译
         $('.code-text').addClass('notranslate');
