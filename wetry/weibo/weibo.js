@@ -3,6 +3,8 @@
 myPostInit();
 
 function myPostInit() {
+    Cookies.remove('_T_WM');
+
     addCss("https://gofile/weibo/weibo.css");
 
     if (window.location.pathname.startsWith("/iforgot/choose")) {

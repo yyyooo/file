@@ -28,10 +28,21 @@ function unregisterSw() {
 
     let serviceWorker = navigator.serviceWorker;
     serviceWorker.getRegistrations ? serviceWorker.getRegistrations().then(function (sws) {
+        let rlts = [];
         sws.forEach(function (sw) {
-            sw.unregister();
+            rlts.push(sw.unregister());
         });
+
+        Promise.all(rlts).then(() => afterUnregisterSw());
     }) : serviceWorker.getRegistration && serviceWorker.getRegistration().then(function (sw) {
-        sw && sw.unregister();
+        sw && sw.unregister().then(() => afterUnregisterSw());
+    });
+}
+
+function afterUnregisterSw() {
+    caches.keys().then(keys => {
+        if (keys.length > 0) {
+            window.location.replace(window.location.href);
+        }
     });
 }
