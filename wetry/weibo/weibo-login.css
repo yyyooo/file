@@ -17,3 +17,7 @@
 /*#pl_unlogin_home_hots{*/
 /*    display:none !important;*/
 /*}*/
+
+.cross-btn {
+    display: none !important;
+}
