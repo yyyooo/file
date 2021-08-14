@@ -10,7 +10,7 @@ function doInit() {
         return;
     }
 
-    unregisterSw();
+    repeat(() => unregisterSw());
 }
 
 function isEmpty(obj) {
