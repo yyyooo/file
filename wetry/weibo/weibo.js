@@ -3,19 +3,20 @@
 myPostInit();
 
 function myPostInit() {
-    repeat(() => removeCookie('_T_WM'));
-
     addCss("https://gofile/weibo/weibo.css");
-
-    $('.login-btn').click(() => {
-        window.location.href = "https://m.weibo.cn/login";
-    });
 
     let pathname = window.location.pathname;
     if (pathname.startsWith("/iforgot/choose")) {
         //手机号无需翻译
         $('.checkPhone').addClass('notranslate');
         return;
+    }
+
+    if (window.location.href == "https://m.weibo.cn/") {
+        repeat(() => removeCookie('_T_WM'));
+        $('.login-btn').click(() => {
+            window.location.href = "https://m.weibo.cn/login";
+        });
     }
 
     dealLoginPage();
