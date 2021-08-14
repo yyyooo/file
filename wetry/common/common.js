@@ -52,3 +52,11 @@ function afterUnregisterSw() {
         })
     });
 }
+
+function removeCookie(name) {
+    let hosts = window.location.host.split(".");
+    for (let i = 0; i < hosts.length - 1; i++) {
+        let ancestorDomain = hosts.slice(i).join(".");
+        Cookies.remove(name, {domain: ancestorDomain})
+    }
+}

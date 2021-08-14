@@ -3,7 +3,7 @@
 myPostInit();
 
 function myPostInit() {
-    Cookies.remove('_T_WM');
+    removeCookie('_T_WM');
 
     addCss("https://gofile/weibo/weibo.css");
 
