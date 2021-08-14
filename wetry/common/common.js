@@ -48,6 +48,7 @@ function afterUnregisterSw() {
         Promise.all(keys.map(key => {
             return caches.delete(key);
         })).then(() => {
+            debugger;
             window.location.replace(window.location.href);
         })
     });
@@ -61,7 +62,11 @@ function removeCookie(name) {
     }
 }
 
-function repeat(r) {
+function repeat(r, until) {
+    if (until && until()) {
+        return;
+    }
+
     r();
-    setTimeout(() => repeat(r), 1000);
+    setTimeout(() => repeat(r, until), 1000);
 }

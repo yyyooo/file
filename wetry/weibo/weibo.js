@@ -7,13 +7,14 @@ function myPostInit() {
 
     addCss("https://gofile/weibo/weibo.css");
 
-    if (window.location.pathname.startsWith("/iforgot/choose")) {
+    $('.login-btn').click(() => window.location.replace("https://m.weibo.cn/login"));
+
+    let pathname = window.location.pathname;
+    if (pathname.startsWith("/iforgot/choose")) {
         //手机号无需翻译
         $('.checkPhone').addClass('notranslate');
         return;
     }
-
-    checkLoginPage();
 
     dealLoginPage();
 }
@@ -39,6 +40,8 @@ function dealLoginPage() {
     if (!isLoginPage()) {
         return;
     }
+
+    $('.cross-btn').click(() => window.location.replace("https://m.weibo.cn/login"));
 
     //手机号无需翻译
     $('.code-text').addClass('notranslate');
