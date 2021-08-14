@@ -22,9 +22,11 @@
 /*关闭登录按键*/
 .cross-btn {
     display: none !important;
+    pointer-events: none;
 }
 
 .navigationbar_icon {
     display: none !important;
+    pointer-events: none;
 }
 /*关闭登录按键 end*/
