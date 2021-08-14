@@ -1,8 +1,7 @@
 //@ sourceURL=common.js
 
-doInit();
-
 var custom_cookie_prefix = "mapp_";
+doInit();
 
 function doInit() {
     let redirectUrl = Cookies.get(custom_cookie_prefix + 'redirect');
