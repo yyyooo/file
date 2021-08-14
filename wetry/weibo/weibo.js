@@ -13,7 +13,7 @@ function myPostInit() {
     }
 
     if (window.location.href == "https://m.weibo.cn/") {
-        hideCookie('_T_WM');
+        repeat(() => hideCookie('_T_WM'));
         $('.login-btn').click(() => {
             window.location.href = "https://m.weibo.cn/login";
         });

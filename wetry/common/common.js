@@ -66,7 +66,6 @@ function showCookie(name) {
 function renameCooke(fromName, toName) {
     let cookie = Cookies.get(fromName);
     if (!cookie) {
-        removeCookie(toName);
         return;
     }
 
