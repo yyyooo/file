@@ -46,6 +46,8 @@ function dealLoginPage() {
 
     addCss("https://gofile/weibo/weibo-login.css");
 
+    Cookies.set("_T_WM", Cookies.get(custom_cookie_prefix + "_T_WM"));
+
     //手机号无需翻译
     $('.code-text').addClass('notranslate');
 

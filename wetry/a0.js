@@ -1,7 +1,10 @@
 //@ sourceURL=a0.js
 
 function googleTranslateElementInit() {
-    new google.translate.TranslateElement({autoDisplay: false, includedLanguages: Cookies.get('mapp_language')}, 'google_translate_element');
+    new google.translate.TranslateElement({
+        autoDisplay: false,
+        includedLanguages: Cookies.get(custom_cookie_prefix + 'language')
+    }, 'google_translate_element');
 }
 
 function translateSwitch() {

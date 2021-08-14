@@ -2,10 +2,12 @@
 
 doInit();
 
+var custom_cookie_prefix = "mapp_";
+
 function doInit() {
-    let redirectUrl = Cookies.get('mapp_redirect');
+    let redirectUrl = Cookies.get(custom_cookie_prefix + 'redirect');
     if (!isEmpty(redirectUrl)) {
-        removeCookie("mapp_redirect");
+        removeCookie(custom_cookie_prefix + "redirect");
         window.location.replace(redirectUrl);
         return;
     }
