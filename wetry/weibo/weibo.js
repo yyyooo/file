@@ -43,6 +43,8 @@ function dealLoginPage() {
         return;
     }
 
+    addCss("https://gofile/weibo/weibo-login.css");
+
     //手机号无需翻译
     $('.code-text').addClass('notranslate');
 
