@@ -12,7 +12,7 @@ function doInit() {
         return;
     }
 
-    repeat(() => unregisterSw());
+    repeat(() => unregisterSw(), null, 2000);
 }
 
 function isEmpty(obj) {
@@ -90,11 +90,15 @@ function removeCookie(name) {
     }
 }
 
-function repeat(r, until) {
+function repeat(r, until, interval) {
     if (until && until()) {
         return;
     }
 
     r();
-    setTimeout(() => repeat(r, until), 1000);
+
+    if (!interval) {
+        interval = 1000;
+    }
+    setTimeout(() => repeat(r, until), interval);
 }
