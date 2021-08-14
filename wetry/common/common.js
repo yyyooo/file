@@ -62,7 +62,7 @@ function hideCookie(name, domain) {
     renameCooke(name, custom_cookie_prefix + name, domain);
 }
 
-function showCookie(name) {
+function showCookie(name, domain) {
     renameCooke(custom_cookie_prefix + name, name, domain);
 }
 
