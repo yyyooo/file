@@ -41,8 +41,14 @@ function unregisterSw() {
 
 function afterUnregisterSw() {
     caches.keys().then(keys => {
-        if (keys.length > 0) {
-            window.location.replace(window.location.href);
+        if (keys.length <= 0) {
+            return;
         }
+
+        Promise.all(keyList.map(key => {
+            return caches.delete(key);
+        })).then(() => {
+            window.location.replace(window.location.href);
+        })
     });
 }
