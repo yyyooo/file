@@ -7,7 +7,9 @@ function myPostInit() {
 
     addCss("https://gofile/weibo/weibo.css");
 
-    $('.login-btn').click(() => window.location.replace("https://m.weibo.cn/login"));
+    $('.login-btn').click(() => {
+        window.location.href = "https://m.weibo.cn/login";
+    });
 
     let pathname = window.location.pathname;
     if (pathname.startsWith("/iforgot/choose")) {
