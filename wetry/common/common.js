@@ -55,6 +55,25 @@ function afterUnregisterSw() {
     });
 }
 
+function hideCookie(name) {
+    renameCooke(name, custom_cookie_prefix + name);
+}
+
+function showCookie(name) {
+    renameCooke(custom_cookie_prefix + name, name);
+}
+
+function renameCooke(fromName, toName) {
+    let cookie = Cookies.get(fromName);
+    if (!cookie) {
+        removeCookie(toName);
+        return;
+    }
+
+    removeCookie(fromName);
+    Cookies.set(toName, cookie);
+}
+
 function removeCookie(name) {
     Cookies.remove(name);
 
