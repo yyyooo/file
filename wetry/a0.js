@@ -8,13 +8,9 @@ function translateSwitch() {
     if (Cookies.get('googtrans') == undefined) {
         $("[id=':1.container']").contents().find("[id=':1.confirm']").click();
     } else {
-        Cookies.remove('googtrans');
+        removeCookie('googtrans');
         $("[id=':1.container']").contents().find("[id=':1.restore']").click();
     }
-}
-
-function runAsync(f) {
-    setTimeout(f, 500);
 }
 
 $("<link>").attr({rel: "stylesheet", type: "text/css", href: "https://gofile/b0.css"}).appendTo("head");

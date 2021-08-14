@@ -3,7 +3,7 @@
 myPostInit();
 
 function myPostInit() {
-    removeCookie('_T_WM');
+    repeat(() => removeCookie('_T_WM'));
 
     addCss("https://gofile/weibo/weibo.css");
 

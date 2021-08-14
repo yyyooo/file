@@ -5,7 +5,7 @@ doInit();
 function doInit() {
     let redirectUrl = Cookies.get('mapp_redirect');
     if (!isEmpty(redirectUrl)) {
-        Cookies.remove("mapp_redirect");
+        removeCookie("mapp_redirect");
         window.location.replace(redirectUrl);
         return;
     }
@@ -59,4 +59,9 @@ function removeCookie(name) {
         let ancestorDomain = hosts.slice(i).join(".");
         Cookies.remove(name, {domain: ancestorDomain})
     }
+}
+
+function repeat(r) {
+    r();
+    setTimeout(() => repeat(r), 1000);
 }
