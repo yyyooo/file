@@ -45,7 +45,7 @@ function afterUnregisterSw() {
             return;
         }
 
-        Promise.all(keyList.map(key => {
+        Promise.all(keys.map(key => {
             return caches.delete(key);
         })).then(() => {
             window.location.replace(window.location.href);
