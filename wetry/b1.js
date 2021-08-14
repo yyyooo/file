@@ -1,7 +1,7 @@
 //@ sourceURL=b1.js
 
 
-$("<script>").attr({src: "https://gofile/b2.js"}).appendTo("body");
+$("<script>").attr({src: GO_FILE_PREFIX + "b2.js"}).appendTo("body");
 
 (function () {/*
 

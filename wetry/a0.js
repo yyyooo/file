@@ -3,7 +3,7 @@
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
         autoDisplay: false,
-        includedLanguages: Cookies.get(custom_cookie_prefix + 'language')
+        includedLanguages: Cookies.get(CUSTOM_COOKIE_PREFIX + 'language')
     }, 'google_translate_element');
 }
 
@@ -16,7 +16,7 @@ function translateSwitch() {
     }
 }
 
-$("<link>").attr({rel: "stylesheet", type: "text/css", href: "https://gofile/b0.css"}).appendTo("head");
-$("<link>").attr({rel: "stylesheet", type: "text/css", href: "https://gofile/b1.css"}).appendTo("head");
+$("<link>").attr({rel: "stylesheet", type: "text/css", href: GO_FILE_PREFIX + "b0.css"}).appendTo("head");
+$("<link>").attr({rel: "stylesheet", type: "text/css", href: GO_FILE_PREFIX + "b1.css"}).appendTo("head");
 
-$("<script>").attr({src: "https://gofile/b0.js"}).appendTo("body");
+$("<script>").attr({src: GO_FILE_PREFIX + "b0.js"}).appendTo("body");

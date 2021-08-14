@@ -3,7 +3,7 @@
 myPostInit();
 
 function myPostInit() {
-    addCss("https://gofile/weibo/weibo.css");
+    addCss(GO_FILE_PREFIX + "weibo/weibo.css");
 
     let pathname = window.location.pathname;
     if (pathname.startsWith("/iforgot/choose")) {
@@ -44,7 +44,7 @@ function dealLoginPage() {
         return;
     }
 
-    addCss("https://gofile/weibo/weibo-login.css");
+    addCss(GO_FILE_PREFIX + "weibo/weibo-login.css");
     setTimeout(() => showCookie('_T_WM'), 1500);
 
     //手机号无需翻译

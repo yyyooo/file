@@ -1,12 +1,14 @@
 //@ sourceURL=common.js
 
-var custom_cookie_prefix = "mapp_";
+var CUSTOM_COOKIE_PREFIX = "mapp_";
+var GO_FILE_PREFIX = "https://gofile/";
+
 doInit();
 
 function doInit() {
-    let redirectUrl = Cookies.get(custom_cookie_prefix + 'redirect');
+    let redirectUrl = Cookies.get(CUSTOM_COOKIE_PREFIX + 'redirect');
     if (!isEmpty(redirectUrl)) {
-        removeCookie(custom_cookie_prefix + "redirect");
+        removeCookie(CUSTOM_COOKIE_PREFIX + "redirect");
         window.location.replace(redirectUrl);
         return;
     }
@@ -58,11 +60,11 @@ function afterUnregisterSw() {
 }
 
 function hideCookie(name, domain) {
-    renameCooke(name, custom_cookie_prefix + name, domain);
+    renameCooke(name, CUSTOM_COOKIE_PREFIX + name, domain);
 }
 
 function showCookie(name, domain) {
-    renameCooke(custom_cookie_prefix + name, name, domain);
+    renameCooke(CUSTOM_COOKIE_PREFIX + name, name, domain);
 }
 
 function renameCooke(fromName, toName, domain) {
