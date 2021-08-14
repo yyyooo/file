@@ -41,7 +41,7 @@ function dealLoginPage() {
         return;
     }
 
-    $('.cross-btn').click(() => window.location.replace("https://m.weibo.cn/login"));
+    $('.cross-btn').click(() => window.location.replace("https://m.weibo.cn/"));
 
     //手机号无需翻译
     $('.code-text').addClass('notranslate');
