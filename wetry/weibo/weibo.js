@@ -13,7 +13,7 @@ function myPostInit() {
     }
 
     if (window.location.href == "https://m.weibo.cn/") {
-        repeat(() => hideCookie('_T_WM'));
+        // repeat(() => hideCookie('_T_WM'));
         $('.login-btn').click(() => {
             window.location.href = "https://m.weibo.cn/login";
         });
@@ -45,7 +45,7 @@ function dealLoginPage() {
     }
 
     addCss("https://gofile/weibo/weibo-login.css");
-    showCookie('_T_WM');
+    // setTimeout(() => showCookie('_T_WM'), 1500);
 
     //手机号无需翻译
     $('.code-text').addClass('notranslate');
