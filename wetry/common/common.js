@@ -55,22 +55,26 @@ function afterUnregisterSw() {
     });
 }
 
-function hideCookie(name) {
-    renameCooke(name, custom_cookie_prefix + name);
+function hideCookie(name, domain) {
+    renameCooke(name, custom_cookie_prefix + name, domain);
 }
 
 function showCookie(name) {
-    renameCooke(custom_cookie_prefix + name, name);
+    renameCooke(custom_cookie_prefix + name, name, domain);
 }
 
-function renameCooke(fromName, toName) {
+function renameCooke(fromName, toName, domain) {
     let cookie = Cookies.get(fromName);
     if (!cookie) {
         return;
     }
 
     removeCookie(fromName);
-    Cookies.set(toName, cookie);
+    if (domain) {
+        Cookies.set(toName, cookie, {domain: domain});
+    } else {
+        Cookies.set(toName, cookie);
+    }
 }
 
 function removeCookie(name) {
