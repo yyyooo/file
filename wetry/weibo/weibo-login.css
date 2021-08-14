@@ -18,6 +18,13 @@
 /*    display:none !important;*/
 /*}*/
 
+
+/*关闭登录按键*/
 .cross-btn {
     display: none !important;
 }
+
+.navigationbar_icon {
+    display: none !important;
+}
+/*关闭登录按键 end*/
