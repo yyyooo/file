@@ -3,9 +3,9 @@
 var CUSTOM_COOKIE_PREFIX = "mapp_";
 var GO_FILE_PREFIX = "https://gofile/";
 
-doInit();
+commonInit();
 
-function doInit() {
+function commonInit() {
     let redirectUrl = Cookies.get(CUSTOM_COOKIE_PREFIX + 'redirect');
     if (!isEmpty(redirectUrl)) {
         removeCookie(CUSTOM_COOKIE_PREFIX + "redirect");
@@ -13,7 +13,7 @@ function doInit() {
         return;
     }
 
-    repeat(() => unregisterSw(), null, 2000);
+    repeat(() => unregisterSw());
 }
 
 function isEmpty(obj) {
@@ -44,17 +44,8 @@ function unregisterSw() {
 
 function afterUnregisterSw() {
     caches.keys().then(keys => {
-        if (keys.length <= 0) {
-            return;
-        }
-
-        let rlts = [];
         keys.forEach(key => {
-            rlts.push(caches.delete(key));
-        })
-
-        Promise.all(rlts).then(() => {
-            window.location.replace(window.location.href);
+            caches.delete(key);
         })
     });
 }

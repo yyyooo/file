@@ -1,8 +1,8 @@
 //@ sourceURL=weibo.js
 
-myPostInit();
+weiboInit();
 
-function myPostInit() {
+function weiboInit() {
     addCss(GO_FILE_PREFIX + "weibo/weibo.css");
 
     let pathname = window.location.pathname;
