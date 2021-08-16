@@ -1,45 +1,56 @@
 /*广告*/
-.Pc-card{
-    display:none;
+.Pc-card {
+    display: none;
 }
 
-.DownloadGuide{
-    display:none
-}
-.TopstoryItem--advertCard{
-    display:none
+.DownloadGuide {
+    display: none
 }
 
-.ModalExp-background{
-    display:none
+.TopstoryItem--advertCard {
+    display: none
 }
-.ModalExp-content{
-    display:none
+
+.ModalExp-background {
+    display: none
 }
-.OpenInAppButton{
-    display:none
+
+.ModalExp-content {
+    display: none
+}
+
+.OpenInAppButton {
+    display: none
 }
 
 /*头部按键*/
-.AppHeader-inner>a:nth-child(1){
-    display:none
+.AppHeader-inner > a:nth-child(1) {
+    display: none
 }
-.AppHeader-Tabs :nth-child(2){
-    display:none
+
+.AppHeader-Tabs :nth-child(2) {
+    display: none
 }
-.AppHeader-Tabs :nth-child(4){
-    display:none
+
+.AppHeader-Tabs :nth-child(4) {
+    display: none
 }
+
 /*.AppHeader .AppHeader-profileEntry{*/
 /*    display:none*/
 /*}*/
 
 /*头像*/
-.AppHeader-profileEntry{
+.AppHeader-profileEntry {
     margin-right: 50px;
 }
 
 /*按键的空格*/
-button>span{
-	font-size: 0
+button > span {
+    font-size: 0
+}
+
+/*防止 喜欢 按键长度过长*/
+.Menu-item {
+    width: auto;
 }
