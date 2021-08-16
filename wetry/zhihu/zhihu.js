@@ -6,6 +6,9 @@ function zhihuInit() {
     $("<link>").attr({rel: "stylesheet", type: "text/css", href: GO_FILE_PREFIX + "zhihu/zhihu.css"}).appendTo("head");
     $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.5,maximum-scale=5");
 
+    $(".MobileAppHeader-downloadLink").attr("href", "https://www.zhihu.com/search");
+    $(".MobileAppHeader-downloadLink").text("搜索");
+
     let pathname = window.location.pathname;
     if ($(".Card.TopstoryItem").length > 0 || $(".List-item.NotLoggedInTopstoryItem").length > 0) {
         //列表首页
