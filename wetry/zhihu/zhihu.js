@@ -12,7 +12,7 @@ function zhihuInit() {
     if (pathname.startsWith("/people/")) {
         $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.35,maximum-scale=5");
     } else {
-        $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.7,maximum-scale=5");
+        $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.85,maximum-scale=5");
     }
 
 
