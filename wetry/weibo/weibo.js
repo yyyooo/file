@@ -18,7 +18,7 @@ function weiboInit() {
                     window.location.replace("https://m.weibo.cn/");
                     return;
                 }
-            }, () => $(".wb-item").length > 0
+            }, () => $(".weibo-text").length > 0
         )
 
         repeat(() => hideCookie('_T_WM'));
