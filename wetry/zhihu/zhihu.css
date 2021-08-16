@@ -59,3 +59,7 @@ button > span {
 .MobileAppHeader-logo {
     display: none
 }
+
+.MobileAppHeader-downloadLink {
+    padding: 0 16px;
+}
