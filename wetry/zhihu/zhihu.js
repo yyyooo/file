@@ -3,13 +3,19 @@
 zhihuInit();
 
 function zhihuInit() {
-    $("<link>").attr({rel: "stylesheet", type: "text/css", href: GO_FILE_PREFIX + "zhihu/zhihu.css"}).appendTo("head");
-    $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.7,maximum-scale=5");
-
     $(".MobileAppHeader-downloadLink").attr("href", "https://www.zhihu.com/search");
     $(".MobileAppHeader-downloadLink").text("搜索");
 
+    $("<link>").attr({rel: "stylesheet", type: "text/css", href: GO_FILE_PREFIX + "zhihu/zhihu.css"}).appendTo("head");
+
     let pathname = window.location.pathname;
+    if (pathname.startsWith("/people/")) {
+        $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.35,maximum-scale=5");
+    } else {
+        $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.7,maximum-scale=5");
+    }
+
+
     if ($(".Card.TopstoryItem").length > 0 || $(".List-item.NotLoggedInTopstoryItem").length > 0) {
         //列表首页
         addCss(GO_FILE_PREFIX + "zhihu/zhihu-list.css");

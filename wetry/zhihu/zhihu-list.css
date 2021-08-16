@@ -1,17 +1,19 @@
 /*侧边栏的*/
-.CreatorEntrance{
-  display:none;
+.CreatorEntrance {
+    display: none;
 }
-.GlobalSideBar-category{
-  display:none;
+
+.GlobalSideBar-category {
+    display: none;
 }
-.GlobalWrite-topItem{
-  margin-left: 100px !important;
+
+.GlobalWrite-topItem {
+    margin-left: 100px !important;
 }
 
 /*动态header*/
-.TopstoryPageHeader{
-  display:none;
+.TopstoryPageHeader {
+    display: none;
 }
 
 /*!*所有按鍵图标*!*/
@@ -22,17 +24,20 @@
 /*.ContentItem-actions :nth-child(3){*/
 /*  display:none*/
 /*}*/
-/*.ContentItem-actions :nth-child(4){
-  display:none
-}*/
-.ContentItem-actions :nth-child(5){
-  display:none
+.ContentItem-actions :nth-child(4) {
+    display: none
 }
-.ContentItem-actions :nth-child(6){
-  display:none
+
+.ContentItem-actions :nth-child(5) {
+    display: none
 }
-.ContentItem-actions :nth-child(7){
-  display:none
+
+.ContentItem-actions :nth-child(6) {
+    display: none
+}
+
+.ContentItem-actions :nth-child(7) {
+    display: none
 }
 
 /*.RichContent-inner{
