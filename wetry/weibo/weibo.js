@@ -21,7 +21,7 @@ function weiboInit() {
             }, () => $(".weibo-text").length > 0
         )
 
-        repeat(() => hideCookie('_T_WM'));
+        repeat(() => hideCookie('_T_WM'), () => $(".lite-iconf-profile").length > 0);
         $('.login-btn').click(() => {
             window.location.href = "https://m.weibo.cn/login";
         });
