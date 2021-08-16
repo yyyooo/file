@@ -13,6 +13,11 @@ function weiboInit() {
     }
 
     if (window.location.href == "https://m.weibo.cn/") {
+        if ($("#app .empty_failed").length > 0) {
+            window.location.replace("https://m.weibo.cn/");
+            return;
+        }
+
         repeat(() => hideCookie('_T_WM'));
         $('.login-btn').click(() => {
             window.location.href = "https://m.weibo.cn/login";
