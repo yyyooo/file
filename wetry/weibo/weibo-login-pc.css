@@ -29,3 +29,8 @@
 .tab_bar {
     display: none !important;
 }
+
+.W_tc a {
+    display: none !important;
+    pointer-events: none;
+}

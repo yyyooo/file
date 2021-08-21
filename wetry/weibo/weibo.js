@@ -58,7 +58,11 @@ function dealPcLoginPage() {
         clickByDoc('.tab_bar [node-type="qrcode_tab"]');
     }, () => {
         let src = $('.qrcode_con img').attr("src");
-        return src && src.indexOf("//") > -1;
+        if (!(src && src.indexOf("//") > -1)) {
+            return false;
+        }
+
+        $('.W_tc').html('<a href="https://m.weibo.cn/login">短信注册登录</a>')
     }, 300)
 }
 
