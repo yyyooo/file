@@ -98,11 +98,12 @@ function dealLoginPage() {
     $('.code-text').click(() => mouseDownByDoc(".box-select"));
     $('.select-icon').click(() => mouseDownByDoc(".box-select"));
 
-    $('.box-title').html('<span>由于微博限制部分海外手机号的注册，</span>' +
-        '<span>建议先注册Wechat，然后在微博官方app通过Wechat登录后，</span>' +
-        '<span>最后在Wetry app 上进行扫码登录。</span>' +
-        '<span>或者使用中国，香港，澳门手机注册登录</span>');
-    $('.share-icon').html('<a href="https://m.weibo.cn/login" style="color: black;"><b>微博扫码登录</b></a>')
+    $('.box-bottom').html('由于微博限制部分海外手机号的注册，<br/>' +
+        '建议先安装注册Wechat app，<br/>' +
+        '然后在微博官方app以Wechat方式登录，<br/>' +
+        '最后在Wetry app 上进行扫码登录。<br/>' +
+        '或者使用中国，香港，澳门手机注册登录。<br/>' +
+        '<a href="https://m.weibo.cn/login" style="color: black;"><b>微博扫码登录</b></a>');
 }
 
 function isLoginPage() {
