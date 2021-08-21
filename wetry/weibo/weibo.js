@@ -63,7 +63,7 @@ function dealPcLoginPage() {
             return false;
         }
 
-        $('.W_tc').html('<a href="https://m.weibo.cn/login" style="color: black;">短信注册登录</a>');
+        $('.W_tc').html('<a href="https://m.weibo.cn/login" style="color: black;font-size: x-large;">短信注册登录</a>');
         return true;
     }, 300)
 }
@@ -104,7 +104,7 @@ function dealLoginPage() {
         '然后在微博官方app以Wechat方式登录，<br/>' +
         '最后在Wetry app 上进行扫码登录。<br/>' +
         '或者使用中国，香港，澳门手机注册登录。<br/>' +
-        '<a href="https://m.weibo.cn/login" style="color: black;"><b>微博扫码登录</b></a>');
+        '<a href="https://m.weibo.cn/login" style="color: black;font-size: x-large;"><b>微博扫码登录</b></a>');
 }
 
 function isLoginPage() {
