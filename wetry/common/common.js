@@ -107,3 +107,11 @@ function repeat(r, until, interval) {
     }
     setTimeout(() => repeat(r, until), interval);
 }
+
+function myDelay(r, delay) {
+    if (!delay) {
+        delay = 1000;
+    }
+
+    setTimeout(r, delay);
+}

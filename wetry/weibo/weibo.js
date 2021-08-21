@@ -37,11 +37,17 @@ function dealPcLoginPage() {
         return;
     }
 
-    setTimeout(() => showCookie('_T_WM'));
+    showCookie('_T_WM')
     addCss(GO_FILE_PREFIX + "weibo/weibo-login-pc.css");
-    $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.7,maximum-scale=5");
+    $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.6,maximum-scale=5");
 
-    clickByDoc('[node-type="loginBtn"]');
+    myDelay(() => {
+        clickByDoc('[node-type="loginBtn"]');
+        myDelay(() => {
+            clickByDoc('.tab_bar [node-type="qrcode_tab"]');
+        }, 500);
+    }, 500);
+
 }
 
 function checkLoginPage() {
@@ -51,13 +57,13 @@ function checkLoginPage() {
 
     let href = window.location.href;
     if (href === "https://m.weibo.cn/") {
-        setTimeout(() => {
+        myDelay(() => {
             if (isLoginPage()) {
                 window.location.replace("https://m.weibo.cn/login");
             } else {
                 checkLoginPage()
             }
-        }, 1000);
+        });
     }
 }
 
@@ -67,7 +73,7 @@ function dealLoginPage() {
     }
 
     addCss(GO_FILE_PREFIX + "weibo/weibo-login.css");
-    setTimeout(() => showCookie('_T_WM'), 1500);
+    myDelay(() => showCookie('_T_WM'), 1500);
 
     //手机号无需翻译
     $('.code-text').addClass('notranslate');
