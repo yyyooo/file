@@ -14,7 +14,7 @@
     display: none !important;
 }
 
-.qr_help {
+[node-type="qr_help"] {
     display: none !important;
 }
 
@@ -26,6 +26,6 @@
     display: none !important;
 }
 
-.tab_bar [node-type="login_tab"] {
+.tab_bar {
     display: none !important;
 }
