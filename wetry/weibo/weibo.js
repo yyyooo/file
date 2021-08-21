@@ -23,7 +23,6 @@ function weiboInit() {
 
         repeat(() => hideCookie('_T_WM'), () => $(".lite-iconf-profile").length > 0);
         $('.login-btn').click(() => {
-            // window.location.href = "https://m.weibo.cn/login";
             window.location.href = "https://weibo.com/login.php";
         });
     }
