@@ -45,8 +45,8 @@ function dealPcLoginPage() {
         clickByDoc('[node-type="loginBtn"]');
         myDelay(() => {
             clickByDoc('.tab_bar [node-type="qrcode_tab"]');
-        }, 500);
-    }, 500);
+        });
+    });
 
 }
 
