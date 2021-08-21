@@ -62,7 +62,8 @@ function dealPcLoginPage() {
             return false;
         }
 
-        $('.W_tc').html('<a href="https://m.weibo.cn/login">短信注册登录</a>')
+        $('.W_tc').html('<a href="https://m.weibo.cn/login">短信注册登录</a>');
+        return true;
     }, 300)
 }
 
