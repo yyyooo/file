@@ -17,3 +17,15 @@
 .qr_help {
     display: none !important;
 }
+
+.W_layer_close {
+    display: none !important;
+}
+
+[node-type="login_frame"] {
+    display: none !important;
+}
+
+.tab_bar [node-type="login_tab"] {
+    display: none !important;
+}
