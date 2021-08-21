@@ -23,11 +23,25 @@ function weiboInit() {
 
         repeat(() => hideCookie('_T_WM'), () => $(".lite-iconf-profile").length > 0);
         $('.login-btn').click(() => {
-            window.location.href = "https://m.weibo.cn/login";
+            // window.location.href = "https://m.weibo.cn/login";
+            window.location.href = "https://weibo.com/login.php";
         });
     }
 
     dealLoginPage();
+    dealPcLoginPage();
+}
+
+function dealPcLoginPage() {
+    if (window.location.href != "https://weibo.com/login.php") {
+        return;
+    }
+
+    setTimeout(() => showCookie('_T_WM'));
+    addCss(GO_FILE_PREFIX + "weibo/weibo-login-pc.css");
+    $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.7,maximum-scale=5");
+
+    clickByDoc('[node-type="loginBtn"]');
 }
 
 function checkLoginPage() {
@@ -58,13 +72,8 @@ function dealLoginPage() {
     //手机号无需翻译
     $('.code-text').addClass('notranslate');
 
-    let expandSelect = () => {
-        let event = document.createEvent('MouseEvents');
-        event.initMouseEvent('mousedown', true, true, window);
-        $(".box-select")[0].dispatchEvent(event)
-    }
-    $('.code-text').click(expandSelect);
-    $('.select-icon').click(expandSelect);
+    $('.code-text').click(() => mouseDownByDoc(".box-select"));
+    $('.select-icon').click(() => mouseDownByDoc(".box-select"));
 }
 
 function isLoginPage() {
