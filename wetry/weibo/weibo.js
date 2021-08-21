@@ -41,13 +41,25 @@ function dealPcLoginPage() {
     addCss(GO_FILE_PREFIX + "weibo/weibo-login-pc.css");
     $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.6,maximum-scale=5");
 
-    myDelay(() => {
-        clickByDoc('[node-type="loginBtn"]');
-        myDelay(() => {
-            clickByDoc('.tab_bar [node-type="qrcode_tab"]');
-        });
-    });
 
+    repeat(() => {
+        if ($('[node-type="loginBtn"]').length <= 0) {
+            return;
+        }
+
+        clickByDoc('[node-type="loginBtn"]');
+    }, () => $('.tab_bar [node-type="qrcode_tab"]').length > 0, 300)
+
+    repeat(() => {
+        if ($('.tab_bar [node-type="qrcode_tab"]').length <= 0) {
+            return;
+        }
+
+        clickByDoc('.tab_bar [node-type="qrcode_tab"]');
+    }, () => {
+        let src = $('.qrcode_con img').attr("src");
+        return src && src.indexOf("//") > -1;
+    }, 300)
 }
 
 function checkLoginPage() {
