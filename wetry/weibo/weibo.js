@@ -22,6 +22,7 @@ function weiboInit() {
         )
 
         repeat(() => hideCookie('_T_WM'), () => $(".lite-iconf-profile").length > 0);
+        $('.login-btn').text("扫码登录/注册")
         $('.login-btn').click(() => {
             window.location.href = "https://weibo.com/login.php";
         });
