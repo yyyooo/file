@@ -1,15 +1,15 @@
-[class*="Frame_side_"] {
+[class*="Frame_side"] {
     width: 180px !important;
 }
 
 
-[class*="Frame_side_"] [class*="NavItem_icon_"] {
-    margin-right: 3px !important;
-    width: 20px !important;
+[class*="Frame_side"] [class*="NavItem_icon_"] {
+    margin-right: 0 !important;
+    width: 25px !important;
     height: 26px !important;
 }
 
-[class*="Frame_side_"] [class*="NavItem_main_"] {
+[class*="Frame_side"] [class*="NavItem_main_"] {
     padding: 8px 0 !important;
 }
 
@@ -27,5 +27,20 @@
 }
 
 [class*="SecBar_"] [class*="woo-box-item-"] {
-    width: 32% !important;
+    width: 50% !important;
 }
+
+/*私信页面 start*/
+[class*="readnum_readWrap_"] {
+    width: 80px !important;
+}
+
+[class*="readnum_linkbox_"] {
+    display: none !important;
+}
+
+.wbpro-layer {
+    width: 450px !important;
+}
+
+/*私信页面 end*/

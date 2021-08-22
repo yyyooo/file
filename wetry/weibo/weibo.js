@@ -12,10 +12,10 @@ function weiboInit() {
         logoParent.prepend('<svg id="mMenuBtn" focusable="false" viewBox="0 0 24 24" style="width: 35px;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>');
         logo.remove();
 
-        $('[class*="Frame_side_"]').attr("style", "display: none;");
+        $('[class*="Frame_side"]').attr("style", "display: none;");
 
         $('#mMenuBtn').click(() => {
-            let sideMenu = $('[class*="Frame_side_"]');
+            let sideMenu = $('[class*="Frame_side"]');
             if (sideMenu.attr("style")) {
                 sideMenu.attr("style", null);
             } else {
