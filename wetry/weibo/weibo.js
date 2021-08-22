@@ -4,7 +4,7 @@ weiboInit();
 
 function weiboInit() {
     if (window.location.host.endsWith("weibo.com")) {
-        $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.8,maximum-scale=5");
+        $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.7,maximum-scale=5");
         addCss(GO_FILE_PREFIX + "weibo/weibo-pc.css");
     } else {
         addCss(GO_FILE_PREFIX + "weibo/weibo.css");
