@@ -7,6 +7,6 @@
 }
 
 [class*="Ctrls_main_"] [class*="Ctrls_item_"] {
-    width: 50% !important;
+    width: 65% !important;
     margin: 0 auto !important;
 }
