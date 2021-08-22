@@ -59,12 +59,16 @@ function dealH5Index() {
     repeat(() => hideCookie('_T_WM'), () => $(".lite-iconf-profile").length > 0);
 
     repeat(() => {
+        if ($('#mLoginBtn').length > 0) {
+            return;
+        }
+
         $('.login-btn').attr("id", "mLoginBtn");
         $('.login-btn').text("扫码登录/注册")
         $('.login-btn').click(() => {
             window.location.href = "https://weibo.com/login.php";
         });
-    }, () => $('#mLoginBtn').length > 0);
+    });
 }
 
 function dealPcLoginPage() {
