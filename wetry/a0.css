@@ -1,8 +1,9 @@
 
-/*body{*/
-/*	top:0px!important; */
-/*    min-height: 0px!important;*/
-/*}*/
+body{
+	top:0px!important;
+    /*微博聊天页面冲突*/
+    /*min-height: 0px!important;*/
+}
 
 .goog-te-banner-frame{
 	display:none
