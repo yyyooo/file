@@ -3,8 +3,8 @@
 weiboInit();
 
 function weiboInit() {
-    if (window.location.href.startsWith("https://weibo.com/")) {
-        $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.6,maximum-scale=5");
+    if (window.location.host.endsWith("weibo.com")) {
+        $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.8,maximum-scale=5");
         addCss(GO_FILE_PREFIX + "weibo/weibo-pc.css");
     } else {
         addCss(GO_FILE_PREFIX + "weibo/weibo.css");
