@@ -1,12 +1,26 @@
 [class*="Frame_side_"] [class*="NavItem_icon_"] {
-    margin-right: 4px !important;
+    margin-right: 0 !important;
+    width: 20px !important;
+    height: 20px !important;
 }
 
 [class*="Frame_side_"] [class*="NavItem_main_"] {
-    padding: 8px !important;
+    padding: 8px 0 !important;
+}
+
+[class*="Frame_top_"] [class*="Nav_left_"] {
+    width: 105px !important;
+}
+
+[class*="Ctrls_main_"] {
+    width: 100% !important;
 }
 
 [class*="Ctrls_main_"] [class*="Ctrls_item_"] {
-    width: 65% !important;
+    width: 50px !important;
     margin: 0 auto !important;
+}
+
+[class*="SecBar_"] [class*="woo-box-item-"] {
+    width: 32% !important;
 }
