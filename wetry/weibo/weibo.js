@@ -3,41 +3,44 @@
 weiboInit();
 
 function weiboInit() {
-    if (window.location.host.endsWith("weibo.com")) {
-        if ($('[action-type="new_pc_apply"]').length > 0) {
-            repeat(() => {
-                clickByDoc('[action-type="new_pc_apply"]');
-            }, () => $('[action-type="new_pc_apply"]').length <= 0, 300);
-            return;
-        }
-
-
-        $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.7,maximum-scale=5");
-        addCss(GO_FILE_PREFIX + "weibo/weibo-pc.css");
-
-        let logo = $('[class*="Frame_top_"] a[class*="Nav_logo"]');
-        let logoParent = logo.parent();
-        logoParent.prepend('<svg id="mMenuBtn" focusable="false" viewBox="0 0 24 24" style="width: 35px;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>');
-        logo.remove();
-
-        $('[class*="Frame_side"]').attr("style", "display: none;");
-
-        $('#mMenuBtn').click(() => {
-            let sideMenu = $('[class*="Frame_side"]');
-            if (sideMenu.attr("style")) {
-                sideMenu.attr("style", null);
-            } else {
-                sideMenu.attr("style", "display: none;");
-            }
-        })
-    } else {
-        addCss(GO_FILE_PREFIX + "weibo/weibo.css");
+    if ($('[action-type="new_pc_apply"]').length > 0) {
+        repeat(() => {
+            clickByDoc('[action-type="new_pc_apply"]');
+        }, () => $('[action-type="new_pc_apply"]').length <= 0, 300);
+        return;
     }
 
+    dealCommon();
     dealH5Index();
-    dealLoginPage();
+    dealH5LoginPage();
     dealPcLoginPage();
     dealForget();
+}
+
+function dealCommon() {
+    if (!window.location.host.endsWith("weibo.com") || window.location.href.startsWith("https://weibo.com/login.php")) {
+        addCss(GO_FILE_PREFIX + "weibo/weibo.css");
+        return;
+    }
+
+    $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.7,maximum-scale=5");
+    addCss(GO_FILE_PREFIX + "weibo/weibo-pc.css");
+
+    let logo = $('[class*="Frame_top_"] a[class*="Nav_logo"]');
+    let logoParent = logo.parent();
+    logoParent.prepend('<svg id="mMenuBtn" focusable="false" viewBox="0 0 24 24" style="width: 35px;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>');
+    logo.remove();
+
+    $('[class*="Frame_side"]').attr("style", "display: none;");
+
+    $('#mMenuBtn').click(() => {
+        let sideMenu = $('[class*="Frame_side"]');
+        if (sideMenu.attr("style")) {
+            sideMenu.attr("style", null);
+        } else {
+            sideMenu.attr("style", "display: none;");
+        }
+    })
 }
 
 function dealH5Index() {
@@ -54,10 +57,14 @@ function dealH5Index() {
     )
 
     repeat(() => hideCookie('_T_WM'), () => $(".lite-iconf-profile").length > 0);
-    $('.login-btn').text("扫码登录/注册")
-    $('.login-btn').click(() => {
-        window.location.href = "https://weibo.com/login.php";
-    });
+
+    repeat(() => {
+        $('.login-btn').attr("id", "mLoginBtn");
+        $('.login-btn').text("扫码登录/注册")
+        $('.login-btn').click(() => {
+            window.location.href = "https://weibo.com/login.php";
+        });
+    }, () => $('#mLoginBtn').length > 0);
 }
 
 function dealPcLoginPage() {
@@ -65,6 +72,8 @@ function dealPcLoginPage() {
     if (pathname != "/login.php" && pathname != "/login.php/") {
         return;
     }
+
+    $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.6,maximum-scale=5");
 
     showCookie('_T_WM')
     addCss(GO_FILE_PREFIX + "weibo/weibo-login-pc.css");
@@ -121,7 +130,7 @@ function dealForget() {
     $('.checkPhone').addClass('notranslate');
 }
 
-function dealLoginPage() {
+function dealH5LoginPage() {
     if (!isLoginPage()) {
         return;
     }
