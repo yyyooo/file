@@ -100,7 +100,8 @@ function dealLoginPage() {
     $('.select-icon').click(() => mouseDownByDoc(".box-select"));
 
     $('.box-center a').attr('href', 'https://weibo.com/login.php');
-    $('.box-center a').text('微博扫码登录');
+    $('.box-center a').text('扫码登录微博');
+    $('.box-bottom').attr('style', 'font-size: large;')
 
     $('.box-bottom').attr('style', 'color: grey;')
     $('.box-bottom').html('由于微博限制部分非中国手机号的注册，<br/><br/>' +
