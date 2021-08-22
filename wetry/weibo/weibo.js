@@ -103,11 +103,11 @@ function dealLoginPage() {
     $('.box-center a').text('微博扫码登录');
 
     $('.box-bottom').attr('style', 'color: grey;')
-    $('.box-bottom').html('由于微博限制部分海外手机号的注册，<br/><br/>' +
-        '建议先安装注册Wechat app，<br/><br/>' +
+    $('.box-bottom').html('由于微博限制部分非中国手机号的注册，<br/><br/>' +
+        '可以先安装注册Wechat app，<br/><br/>' +
         '然后在微博官方app以Wechat方式登录，<br/><br/>' +
-        '最后在Wetry app 上进行扫码登录。<br/><br/>' +
-        '或者使用中国，香港，澳门手机注册登录。<br/><br/><br/>');
+        '最后在Wetry app 上进行扫码登录。<br/><br/><br/>' +
+        '或者用你的中国、香港、澳门手机号注册登录。<br/><br/>');
 }
 
 function isLoginPage() {
