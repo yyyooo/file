@@ -1,7 +1,12 @@
+[class*="Frame_side_"] {
+    width: 180px !important;
+}
+
+
 [class*="Frame_side_"] [class*="NavItem_icon_"] {
-    margin-right: 0 !important;
+    margin-right: 3px !important;
     width: 20px !important;
-    height: 20px !important;
+    height: 26px !important;
 }
 
 [class*="Frame_side_"] [class*="NavItem_main_"] {
