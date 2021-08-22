@@ -6,6 +6,18 @@ function weiboInit() {
     if (window.location.host.endsWith("weibo.com")) {
         $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.7,maximum-scale=5");
         addCss(GO_FILE_PREFIX + "weibo/weibo-pc.css");
+
+        $('[class*="Frame_top_"] a[class*="Nav_logo"]').outerHTML('<svg id="mMenuBtn" focusable="false" viewBox="0 0 24 24" style="width: 35px;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>');
+        $('[class*="Frame_side_"]').attr("style", "display: none;");
+
+        $('#mMenuBtn').click(() => {
+            let sideMenu = $('[class*="Frame_side_"]');
+            if (sideMenu.attr("style")) {
+                sideMenu.attr("style", null);
+            } else {
+                sideMenu.attr("style", "display: none;");
+            }
+        })
     } else {
         addCss(GO_FILE_PREFIX + "weibo/weibo.css");
     }
