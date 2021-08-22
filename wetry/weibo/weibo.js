@@ -4,6 +4,14 @@ weiboInit();
 
 function weiboInit() {
     if (window.location.host.endsWith("weibo.com")) {
+        if ($('[action-type="new_pc_apply"]').length > 0) {
+            repeat(() => {
+                clickByDoc('[action-type="new_pc_apply"]');
+            }, () => $('[action-type="new_pc_apply"]').length <= 0, 300);
+            return;
+        }
+
+
         $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.7,maximum-scale=5");
         addCss(GO_FILE_PREFIX + "weibo/weibo-pc.css");
 
