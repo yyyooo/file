@@ -5,3 +5,8 @@
 [class*="Frame_side_"] [class*="NavItem_main_"] {
     padding: 8px !important;
 }
+
+[class*="Ctrls_main_"] [class*="Ctrls_item_"] {
+    width: 50% !important;
+    margin: 0 auto !important;
+}
