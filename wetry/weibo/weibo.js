@@ -3,10 +3,11 @@
 weiboInit();
 
 function weiboInit() {
-    if (window.location.href.startsWith("https://m.weibo.cn/")) {
-        addCss(GO_FILE_PREFIX + "weibo/weibo.css");
-    } else {
+    if (window.location.href.startsWith("https://weibo.com/")) {
+        $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.6,maximum-scale=5");
         addCss(GO_FILE_PREFIX + "weibo/weibo-pc.css");
+    } else {
+        addCss(GO_FILE_PREFIX + "weibo/weibo.css");
     }
 
     dealH5Index();
@@ -43,8 +44,6 @@ function dealPcLoginPage() {
 
     showCookie('_T_WM')
     addCss(GO_FILE_PREFIX + "weibo/weibo-login-pc.css");
-    $("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.6,maximum-scale=5");
-
 
     repeat(() => {
         if ($('[node-type="loginBtn"]').length <= 0) {
