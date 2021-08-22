@@ -63,7 +63,7 @@ function dealPcLoginPage() {
             return false;
         }
 
-        $('.W_tc').html('<a href="https://m.weibo.cn/login" style="color: black;font-size: x-large;">短信注册登录</a>');
+        $('.W_tc').html('<u><a href="https://m.weibo.cn/login" style="color: grey;font-size: x-large;">短信注册登录</a></u>');
         return true;
     }, 300)
 }
@@ -102,11 +102,12 @@ function dealLoginPage() {
     $('.box-center a').attr('href', 'https://weibo.com/login.php');
     $('.box-center a').text('微博扫码登录');
 
-    $('.box-bottom').html('由于微博限制部分海外手机号的注册，<br/>' +
+    $('.box-bottom').attr('style', 'color: grey;')
+    $('.box-bottom').html('由于微博限制部分海外手机号的注册，<br/><br/>' +
         '建议先安装注册Wechat app，<br/><br/>' +
         '然后在微博官方app以Wechat方式登录，<br/><br/>' +
         '最后在Wetry app 上进行扫码登录。<br/><br/>' +
-        '或者使用中国，香港，澳门手机注册登录。<br/><br/>');
+        '或者使用中国，香港，澳门手机注册登录。<br/><br/><br/>');
 }
 
 function isLoginPage() {
