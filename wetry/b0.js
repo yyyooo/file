@@ -1,7 +1,7 @@
 //@ sourceURL=b0.js
 
 
-$("<script>").attr({src: GO_FILE_PREFIX+"b1.js"}).appendTo("body");
+jQuery("<script>").attr({src: GO_FILE_PREFIX+"b1.js"}).appendTo("body");
 
 (function(){var gtConstEvalStartTime = new Date();/*
 

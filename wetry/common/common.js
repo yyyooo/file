@@ -6,6 +6,8 @@ var GO_FILE_PREFIX = "https://gofile/";
 commonInit();
 
 function commonInit() {
+    $.noConflict();
+
     let redirectUrl = Cookies.get(CUSTOM_COOKIE_PREFIX + 'redirect');
     if (!isEmpty(redirectUrl)) {
         removeCookie(CUSTOM_COOKIE_PREFIX + "redirect");
@@ -21,20 +23,20 @@ function isEmpty(obj) {
 }
 
 function addCss(cssUrl) {
-    $("<link>").attr({rel: "stylesheet", type: "text/css", href: cssUrl}).appendTo("head");
+    jQuery("<link>").attr({rel: "stylesheet", type: "text/css", href: cssUrl}).appendTo("head");
 }
 
 
 function clickByDoc(selector) {
     let event = document.createEvent('HTMLEvents');
     event.initEvent('click', true, true);
-    $(selector)[0].dispatchEvent(event)
+    jQuery(selector)[0].dispatchEvent(event)
 }
 
 function mouseDownByDoc(selector) {
     let event = document.createEvent('MouseEvents');
     event.initMouseEvent('mousedown', true, true, window);
-    $(selector)[0].dispatchEvent(event)
+    jQuery(selector)[0].dispatchEvent(event)
 }
 
 function unregisterSw() {
