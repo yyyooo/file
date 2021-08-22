@@ -23,6 +23,11 @@ function dealCommon() {
         return;
     }
 
+    if (window.location.href.startsWith("https://api.weibo.com/chat")) {
+        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.45,maximum-scale=5");
+        return;
+    }
+
     jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.7,maximum-scale=5");
     addCss(GO_FILE_PREFIX + "weibo/weibo-pc.css");
 
