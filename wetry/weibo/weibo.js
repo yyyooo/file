@@ -3,33 +3,36 @@
 weiboInit();
 
 function weiboInit() {
-    addCss(GO_FILE_PREFIX + "weibo/weibo.css");
+    if (window.location.href.startsWith("https://m.weibo.cn/")) {
+        addCss(GO_FILE_PREFIX + "weibo/weibo.css");
+    } else {
+        addCss(GO_FILE_PREFIX + "weibo/weibo-pc.css");
+    }
 
-    let pathname = window.location.pathname;
-    if (pathname.startsWith("/iforgot/choose")) {
-        //手机号无需翻译
-        $('.checkPhone').addClass('notranslate');
+    dealH5Index();
+    dealLoginPage();
+    dealPcLoginPage();
+    dealForget();
+}
+
+function dealH5Index() {
+    if (window.location.href != "https://m.weibo.cn/") {
         return;
     }
 
-    if (window.location.href == "https://m.weibo.cn/") {
-        repeat(() => {
-                if ($("#app .empty_failed").length > 0) {
-                    window.location.replace("https://m.weibo.cn/");
-                    return;
-                }
-            }, () => $(".weibo-text").length > 0
-        )
+    repeat(() => {
+            if ($("#app .empty_failed").length > 0) {
+                window.location.replace("https://m.weibo.cn/");
+                return;
+            }
+        }, () => $(".weibo-text").length > 0
+    )
 
-        repeat(() => hideCookie('_T_WM'), () => $(".lite-iconf-profile").length > 0);
-        $('.login-btn').text("扫码登录/注册")
-        $('.login-btn').click(() => {
-            window.location.href = "https://weibo.com/login.php";
-        });
-    }
-
-    dealLoginPage();
-    dealPcLoginPage();
+    repeat(() => hideCookie('_T_WM'), () => $(".lite-iconf-profile").length > 0);
+    $('.login-btn').text("扫码登录/注册")
+    $('.login-btn').click(() => {
+        window.location.href = "https://weibo.com/login.php";
+    });
 }
 
 function dealPcLoginPage() {
@@ -83,6 +86,16 @@ function checkLoginPage() {
             }
         });
     }
+}
+
+function dealForget() {
+    let pathname = window.location.pathname;
+    if (!pathname.startsWith("/iforgot/choose")) {
+        return;
+    }
+
+    //手机号无需翻译
+    $('.checkPhone').addClass('notranslate');
 }
 
 function dealLoginPage() {
