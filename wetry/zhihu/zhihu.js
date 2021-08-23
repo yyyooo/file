@@ -54,11 +54,12 @@ function dealSignin() {
     addGoFileCss("zhihu/zhihu-login.css");
 
     repeat(() => {
+        if (jQuery('[role="combobox"] > font').length > 0) {
+            window.location.replace(window.location.href);
+        }
+
         let box = jQuery('[role="combobox"]')
         if (box.hasClass("notranslate")) {
-            if (jQuery('[role="combobox"] > font').length > 0) {
-                window.location.replace(window.location.href);
-            }
             return;
         }
 
