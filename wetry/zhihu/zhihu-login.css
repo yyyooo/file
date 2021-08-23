@@ -16,7 +16,11 @@
 }
 
 .Login-content {
-    padding: 0 24px 10px !important;
+    padding: 0 24px 55px !important;
+}
+
+.Login-socialLogin > span:not(.Login-socialButtonGroup) {
+    display: none;
 }
 
 .SignFlowHomepage-logo {
