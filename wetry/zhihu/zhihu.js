@@ -67,6 +67,8 @@ function dealSignin() {
         box.addClass('notranslate');
     })
 
+    jQuery('.Login-socialButtonGroup .Zi--QQ').parent().remove();
+
     jQuery('.Login-socialLogin').parent().append(
         '<div style="color: grey;padding: 0 24px;">' +
         '由于知乎限制部分非中国手机号的注册，<br/><br/>' +
