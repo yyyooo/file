@@ -63,7 +63,7 @@ function dealSignin() {
         '<div style="color: grey;padding: 0 24px;">' +
         '由于知乎限制部分非中国手机号的注册，<br/><br/>' +
         '最好通过Wechat或者Weibo登录.<br/><br/><br/>' +
-        '或者用你的中国、香港、澳门手机号注册登录。<br/><br/>' +
+        '或者用你的中国、香港、澳门手机号注册登录。<br/>' +
         '</div>');
 }
 
