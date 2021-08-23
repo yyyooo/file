@@ -28,9 +28,17 @@
 }
 
 .Qrcode-container {
-    padding: 55px 0 !important;
+    padding: 5px 0 55px 0 !important;
 }
 
 .SignFlow-account {
     margin-top: 0 !important;
+}
+
+[type="submit"] {
+    margin-top: 20px !important;
+}
+
+.Login-content .SignFlow-tab {
+    height: 45px !important;
 }

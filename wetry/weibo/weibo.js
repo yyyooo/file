@@ -163,7 +163,7 @@ function dealH5LoginPage() {
         '最好通过微博app扫码登录，<br/><br/>' +
         '而微博app建议通过Wechat登录，<br/><br/>' +
         '因为Wechat支持海外手机注册。<br/><br/>' +
-        '或者用你的中国、香港、澳门手机号在此页面注册登录。<br/><br/>');
+        '或者用你的中国、香港、澳门手机号在此页面注册登录。<br/>');
 }
 
 function isLoginPage() {
