@@ -42,3 +42,7 @@
 .Login-content .SignFlow-tab {
     height: 45px !important;
 }
+
+.Login-options {
+    display: none;
+}
