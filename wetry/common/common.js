@@ -16,6 +16,8 @@ function commonInit() {
     }
 
     repeat(() => unregisterSw());
+
+    dealQQLogin();
 }
 
 function isEmpty(obj) {
@@ -120,4 +122,12 @@ function myDelay(r, delay) {
     }
 
     setTimeout(r, delay);
+}
+
+function dealQQLogin() {
+    if (!window.location.href.startsWith("https://graph.qq.com/oauth")) {
+        return;
+    }
+
+    jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.75,maximum-scale=5");
 }
