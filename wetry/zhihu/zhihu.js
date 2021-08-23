@@ -92,6 +92,6 @@ function dealPwReset() {
         }
 
         box.attr("translate", "no");
-        jQuery('.SignFlow-account > div').attr("translate", "yes");
+        jQuery('.SignFlow-account > *').attr("translate", "yes");
     })
 }
