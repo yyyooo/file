@@ -26,6 +26,6 @@
     display: none !important;
 }
 
-.tab_bar {
+[class*='layer_login_register_'] .tab_bar {
     display: none !important;
 }
