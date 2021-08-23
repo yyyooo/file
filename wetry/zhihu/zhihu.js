@@ -53,15 +53,13 @@ function dealSignin() {
 
     addGoFileCss("zhihu/zhihu-login.css");
 
-    repeat(() => {
-        let box = jQuery('[role="combobox"]')
-        if (box.hasClass("notranslate")) {
-            return;
-        }
-
+    let rewrite = () => {
         jQuery('.SignFlow-smsInput .Input').attr("placeholder", "6位短信验证码");
-        box.addClass('notranslate');
-    })
+        jQuery('[role="combobox"]').addClass('notranslate');
+    }
+
+    rewrite.call();
+    jQuery('.Login-content .SignFlow-tab').click(rewrite)
 
     jQuery('.Login-socialLogin').parent().append(
         '<div style="color: grey;padding: 0 24px;">' +
