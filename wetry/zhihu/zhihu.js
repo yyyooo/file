@@ -7,8 +7,8 @@ function zhihuInit() {
     dealList();
     dealDetail();
     dealSignin();
+    dealPwReset();
 }
-
 
 function dealCommon() {
     jQuery(".MobileAppHeader-downloadLink").attr("href", "https://www.zhihu.com/search");
@@ -27,6 +27,7 @@ function dealCommon() {
         jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.85,maximum-scale=5");
     }
 }
+
 
 function dealList() {
     if (jQuery(".Card.TopstoryItem").length > 0 || jQuery(".List-item.NotLoggedInTopstoryItem").length > 0) {
@@ -78,4 +79,19 @@ function dealSignin() {
         '</div>');
 }
 
+function dealPwReset() {
+    if (!window.location.href.startsWith("https://www.zhihu.com/account/password_reset")) {
+        return;
+    }
 
+    jQuery('.SignFlow-account').attr("translate", "no");
+    repeat(() => {
+        let box = jQuery('.SignFlow-account [role="combobox"]')
+        if (box.attr("translate") == "no") {
+            return;
+        }
+
+        box.attr("translate", "no");
+        jQuery('.SignFlow-account > div').attr("translate", "yes");
+    })
+}
