@@ -154,15 +154,16 @@ function dealH5LoginPage() {
     jQuery('.select-icon').click(() => mouseDownByDoc(".box-select"));
 
     jQuery('.box-center a').attr('href', 'https://weibo.com/login.php');
-    jQuery('.box-center a').text('扫码登录微博');
+    jQuery('.box-center a').text('通过微博app扫码登录');
     jQuery('.box-bottom').attr('style', 'font-size: large;')
 
     jQuery('.box-bottom').attr('style', 'color: grey;')
-    jQuery('.box-bottom').html('由于微博限制部分非中国手机号的注册，<br/><br/>' +
-        '可以先安装注册Wechat app，<br/><br/>' +
-        '然后在微博官方app以Wechat方式登录，<br/><br/>' +
-        '最后在Wetry app 上进行扫码登录。<br/><br/><br/>' +
-        '或者用你的中国、香港、澳门手机号注册登录。<br/><br/>');
+    jQuery('.box-bottom').html(
+        '由于微博限制部分非中国手机号，<br/><br/>' +
+        '最好通过微博app扫码登录，<br/><br/>' +
+        '而微博app建议通过Wechat登录，<br/><br/>' +
+        '因为Wechat支持海外手机注册。<br/><br/>' +
+        '或者用你的中国、香港、澳门手机号在此页面注册登录。<br/><br/>');
 }
 
 function isLoginPage() {
