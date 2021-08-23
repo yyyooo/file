@@ -36,6 +36,7 @@ function dealList() {
 }
 
 function dealDetail() {
+    let pathname = window.location.pathname;
     if (pathname.startsWith("/question/") || pathname.startsWith("/zvideo/") || pathname.startsWith("/p/")) {
         addGoFileCss("zhihu/zhihu-detail.css");
 
