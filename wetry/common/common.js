@@ -22,6 +22,10 @@ function isEmpty(obj) {
     return typeof obj === 'undefined' || obj == null || obj === '';
 }
 
+function addGoFileCss(cssUrl) {
+    jQuery("<link>").attr({rel: "stylesheet", type: "text/css", href: GO_FILE_PREFIX + cssUrl}).appendTo("head");
+}
+
 function addCss(cssUrl) {
     jQuery("<link>").attr({rel: "stylesheet", type: "text/css", href: cssUrl}).appendTo("head");
 }

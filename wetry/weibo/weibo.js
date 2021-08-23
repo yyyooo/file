@@ -19,7 +19,7 @@ function weiboInit() {
 
 function dealCommon() {
     if (!window.location.host.endsWith("weibo.com") || window.location.href.startsWith("https://weibo.com/login.php")) {
-        addCss(GO_FILE_PREFIX + "weibo/weibo.css");
+        addGoFileCss("weibo/weibo.css");
         return;
     }
 
@@ -29,7 +29,7 @@ function dealCommon() {
     }
 
     jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.7,maximum-scale=5");
-    addCss(GO_FILE_PREFIX + "weibo/weibo-pc.css");
+    addGoFileCss("weibo/weibo-pc.css");
 
     let logo = jQuery('[class*="Frame_top_"] a[class*="Nav_logo"]');
     let logoParent = logo.parent();
@@ -85,7 +85,7 @@ function dealPcLoginPage() {
     jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.6,maximum-scale=5");
 
     showCookie('_T_WM')
-    addCss(GO_FILE_PREFIX + "weibo/weibo-login-pc.css");
+    addGoFileCss("weibo/weibo-login-pc.css");
 
     repeat(() => {
         if (jQuery('[node-type="loginBtn"]').length <= 0) {
@@ -144,7 +144,7 @@ function dealH5LoginPage() {
         return;
     }
 
-    addCss(GO_FILE_PREFIX + "weibo/weibo-login.css");
+    addGoFileCss("weibo/weibo-login.css");
     myDelay(() => showCookie('_T_WM'), 1500);
 
     //手机号无需翻译

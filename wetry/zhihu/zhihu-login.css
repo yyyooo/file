@@ -1,0 +1,16 @@
+.SignFlowHomepage-footer {
+    display: none;
+}
+
+.SignFlowHomepage-content > div > :nth-child(4) {
+    display: none;
+}
+
+.SignFlowHomepage-logo + div {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.SignFlowHomepage-logo {
+    display: none;
+}
