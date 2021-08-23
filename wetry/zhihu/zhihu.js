@@ -65,7 +65,7 @@ function dealSignin() {
         jQuery('.SignFlow-smsInputContainer + .Login-options').attr("translate", "no");
         box.attr("translate", "no");
 
-        jQuery('.Login-content').attr("translate", "yes");
+        jQuery('.Login-content > * > *').attr("translate", "yes");
     })
 
     jQuery('.Login-socialButtonGroup .Zi--QQ').parent().remove();
