@@ -26,3 +26,7 @@
 .SignFlowHomepage-logo {
     display: none;
 }
+
+.Qrcode-container {
+    padding: 55px 0 !important;
+}
