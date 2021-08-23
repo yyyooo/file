@@ -8,6 +8,7 @@ function zhihuInit() {
     dealDetail();
     dealSignin();
     dealPwReset();
+    dealShenSu();
 }
 
 function dealCommon() {
@@ -92,6 +93,26 @@ function dealPwReset() {
         }
 
         box.attr("translate", "no");
-        // jQuery('.SignFlow-account > *').attr("translate", "yes");
+        jQuery('.SignFlow-account > *').attr("translate", "yes");
     })
+
+    jQuery('.PasswordReset-accountLink').attr("style", "bottom: -30px;");
+}
+
+function dealShenSu() {
+    if (!window.location.href.startsWith("https://www.zhihu.com/account/appeal")) {
+        return;
+    }
+
+    jQuery('.AccountInfo-main > form').attr("translate", "no");
+    repeat(() => {
+        let box = jQuery('.SignFlow-account [role="combobox"]')
+        if (box.attr("translate") == "no") {
+            return;
+        }
+
+        box.attr("translate", "no");
+        jQuery('.AccountInfo-main > form > * > *').attr("translate", "yes");
+    })
+
 }
