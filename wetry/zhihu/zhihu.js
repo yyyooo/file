@@ -53,22 +53,19 @@ function dealSignin() {
 
     addGoFileCss("zhihu/zhihu-login.css");
 
-    // repeat(() => {
-    //     if (jQuery('[role="combobox"] > font').length > 0) {
-    //         window.location.replace(window.location.href);
-    //     }
-    //
-    //     let box = jQuery('[role="combobox"]')
-    //     if (box.hasClass("notranslate")) {
-    //         return;
-    //     }
-    //
-    //     jQuery('.SignFlow-smsInput .Input').attr("placeholder", "6位短信验证码");
-    //     box.addClass('notranslate');
-    //     jQuery('.SignFlow-smsInputContainer + .Login-options').addClass('notranslate');
-    // })
+    jQuery('.SignContainer-inner').attr("translate", "no");
+    repeat(() => {
+        let box = jQuery('.SignFlow-account [role="combobox"]')
+        if (box.attr("translate") == "no") {
+            return;
+        }
 
-    jQuery('.SignContainer-inner').attr("translate","no");
+        jQuery('.SignFlow-smsInput .Input').attr("placeholder", "6位短信验证码");
+        jQuery('.SignFlow-smsInputContainer + .Login-options').attr("translate", "no");
+        box.attr("translate", "no");
+
+        jQuery('.Login-content').attr("translate", "yes");
+    })
 
     jQuery('.Login-socialButtonGroup .Zi--QQ').parent().remove();
 
