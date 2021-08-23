@@ -54,10 +54,19 @@ function dealSignin() {
     addGoFileCss("zhihu/zhihu-login.css");
 
     repeat(() => {
-        jQuery(".MobileSMSIdentify-content span").addClass('notranslate');
+        jQuery('[role="combobox"]').addClass('notranslate');
     }, () => {
-        return jQuery(".MobileSMSIdentify-content span").hasClass("notranslate")
+        return jQuery('[role="combobox"]').hasClass("notranslate")
     })
+
+    jQuery('.Login-socialLogin').parent().append(
+        '<div style="color: grey;padding: 0 24px;">' +
+        '由于微博限制部分非中国手机号的注册，<br/><br/>' +
+        '可以先安装注册Wechat app，<br/><br/>' +
+        '然后在微博官方app以Wechat方式登录，<br/><br/>' +
+        '最后在Wetry app 上进行扫码登录。<br/><br/><br/>' +
+        '或者用你的中国、香港、澳门手机号注册登录。<br/><br/>' +
+        '</div>');
 }
 
 

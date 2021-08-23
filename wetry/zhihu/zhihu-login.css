@@ -6,6 +6,10 @@
     display: none;
 }
 
+.SignContainer-tip {
+    display: none;
+}
+
 .SignFlowHomepage-logo + div {
     width: 100% !important;
     height: 100% !important;
