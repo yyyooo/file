@@ -65,6 +65,7 @@ function dealSignin() {
 
         jQuery('.SignFlow-smsInput .Input').attr("placeholder", "6位短信验证码");
         box.addClass('notranslate');
+        jQuery('.Login-options').addClass('notranslate');
     })
 
     jQuery('.Login-socialButtonGroup .Zi--QQ').parent().remove();
