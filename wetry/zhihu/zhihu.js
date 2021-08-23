@@ -59,6 +59,8 @@ function dealSignin() {
         return jQuery('[role="combobox"]').hasClass("notranslate")
     })
 
+    jQuery('.SignFlow-smsInput .Input').attr("placeholder", "6位短信验证码");
+
     jQuery('.Login-socialLogin').parent().append(
         '<div style="color: grey;padding: 0 24px;">' +
         '由于知乎限制部分非中国手机号的注册，<br/><br/>' +
