@@ -36,7 +36,7 @@ function dealCommon() {
     logoParent.prepend('<svg id="mMenuBtn" focusable="false" viewBox="0 0 24 24" style="width: 35px;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>');
     logo.remove();
 
-    jQuery('[class*="Frame_side"]').attr("style", "display: none;");
+    myDelay(() => jQuery('[class*="Frame_side"]').attr("style", "display: none;"));
 
     jQuery('#mMenuBtn').click(() => {
         let sideMenu = jQuery('[class*="Frame_side"]');
