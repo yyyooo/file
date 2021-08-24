@@ -77,7 +77,7 @@ function dealH5Index() {
 }
 
 function dealPcLoginPage() {
-    if (!window.location.href.startsWith("https://weibo.com/overseas?mylogin")) {
+    if (!window.location.href.startsWith("https://weibo.com/overseas?mylogin") && !window.location.href.startsWith("https://weibo.com/login.php")) {
         return;
     }
 
