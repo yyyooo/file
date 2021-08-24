@@ -33,3 +33,8 @@
 [class*="layer_login_register_"] > img[src*="rs.sinajs.cn/xdht.gif"] {
     display: none !important;
 }
+
+.qrcode_con {
+    height: 260px !important;
+    margin-top: 0 !important;
+}
