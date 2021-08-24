@@ -4,6 +4,7 @@ zhihuInit();
 
 function zhihuInit() {
     dealCommon();
+
     dealList();
     dealDetail();
     dealSignin();
@@ -12,9 +13,6 @@ function zhihuInit() {
 }
 
 function dealCommon() {
-    jQuery('.MobileAppHeader-actions').prepend('<a class="MobileAppHeader-navItem" href="https://www.zhihu.com/hot">热门</a>')
-    jQuery('.MobileAppHeader-actions').prepend('<a class="MobileAppHeader-navItem" href="https://www.zhihu.com/search">搜索</a>')
-
     jQuery("<link>").attr({
         rel: "stylesheet",
         type: "text/css",
@@ -32,6 +30,10 @@ function dealCommon() {
 
 function dealList() {
     if (jQuery(".Card.TopstoryItem").length > 0 || jQuery(".List-item.NotLoggedInTopstoryItem").length > 0) {
+        let actions = jQuery('.MobileAppHeader-actions');
+        actions.prepend('<a class="MobileAppHeader-navItem" href="https://www.zhihu.com/hot">热门</a>')
+        actions.prepend('<a class="MobileAppHeader-navItem" href="https://www.zhihu.com/search">搜索</a>')
+
         //列表首页
         addGoFileCss("zhihu/zhihu-list.css");
     }
