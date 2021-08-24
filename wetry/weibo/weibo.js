@@ -3,6 +3,7 @@
 weiboInit();
 
 function weiboInit() {
+    //
     if (jQuery('[action-type="new_pc_apply"]').length > 0) {
         repeat(() => {
             clickByDoc('[action-type="new_pc_apply"]');
