@@ -12,8 +12,8 @@ function zhihuInit() {
 }
 
 function dealCommon() {
-    jQuery('.MobileAppHeader-actions').prepend('<a class="MobileAppHeader-navItem" href="https://www.zhihu.com/search">搜索</a>')
     jQuery('.MobileAppHeader-actions').prepend('<a class="MobileAppHeader-navItem" href="https://www.zhihu.com/hot">热门</a>')
+    jQuery('.MobileAppHeader-actions').prepend('<a class="MobileAppHeader-navItem" href="https://www.zhihu.com/search">搜索</a>')
 
     jQuery("<link>").attr({
         rel: "stylesheet",

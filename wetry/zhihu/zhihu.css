@@ -61,5 +61,5 @@ button > span {
 }
 
 .MobileAppHeader-downloadLink {
-    padding: 0 16px;
+    display: none
 }
