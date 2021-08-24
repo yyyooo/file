@@ -5,6 +5,7 @@ zhihuInit();
 function zhihuInit() {
     dealCommon();
 
+    dealHot();
     dealList();
     dealDetail();
     dealSignin();
@@ -25,6 +26,14 @@ function dealCommon() {
     } else {
         jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.85,maximum-scale=5");
     }
+}
+
+function dealHot() {
+    if (!window.location.href.startsWith("https://www.zhihu.com/hot")) {
+        return;
+    }
+
+    jQuery('.MobileAppHeader-actions').prepend('<a class="MobileAppHeader-navItem" href="https://www.zhihu.com/search">搜索</a>')
 }
 
 
