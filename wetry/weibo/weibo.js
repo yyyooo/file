@@ -18,7 +18,7 @@ function weiboInit() {
 }
 
 function dealCommon() {
-    if (!window.location.host.endsWith("weibo.com") || window.location.href.startsWith("https://weibo.com/login.php")) {
+    if (!window.location.host.endsWith("weibo.com")) {
         addGoFileCss("weibo/weibo.css");
         return;
     }
@@ -71,14 +71,13 @@ function dealH5Index() {
         jQuery('.login-btn').attr("id", "mLoginBtn");
         jQuery('.login-btn').text("扫码登录/注册")
         jQuery('.login-btn').click(() => {
-            window.location.href = "https://weibo.com/login.php";
+            window.location.href = "https://weibo.com/overseas?mylogin";
         });
     });
 }
 
 function dealPcLoginPage() {
-    let pathname = window.location.pathname;
-    if (pathname != "/login.php" && pathname != "/login.php/") {
+    if (!window.location.href.startsWith("https://weibo.com/overseas?mylogin")) {
         return;
     }
 
@@ -153,7 +152,7 @@ function dealH5LoginPage() {
     jQuery('.code-text').click(() => mouseDownByDoc(".box-select"));
     jQuery('.select-icon').click(() => mouseDownByDoc(".box-select"));
 
-    jQuery('.box-center a').attr('href', 'https://weibo.com/login.php');
+    jQuery('.box-center a').attr('href', 'https://weibo.com/overseas?mylogin');
     jQuery('.box-center a').text('通过微博app扫码登录');
     jQuery('.box-bottom').attr('style', 'font-size: large;')
 
