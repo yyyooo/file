@@ -2,7 +2,8 @@
 
 var CUSTOM_COOKIE_PREFIX = "mapp_";
 // var GO_FILE_PREFIX = "/gofile/" + new Date().getTime() + "/";
-var GO_FILE_PREFIX = "https://gofile/";
+var GO_FILE_PREFIX = window.location.origin + "/gofile/" + new Date().getTime() + "/";
+// var GO_FILE_PREFIX = "https://gofile/";
 
 commonInit();
 
