@@ -10,11 +10,6 @@ function weiboInit() {
         return;
     }
 
-    if (window.location.href.startsWith("https://weibo.com/login.php?url=")) {
-        window.location.replace("https://weibo.com/login.php");
-        return;
-    }
-
     dealCommon();
     dealH5Index();
     dealH5LoginPage();
