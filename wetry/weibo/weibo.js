@@ -92,6 +92,17 @@ function dealPcLoginPage() {
     addGoFileCss("weibo/weibo-login-pc.css");
 
     repeat(() => {
+        let qrcodeErr = jQuery('[node-type="qrcode_err"]');
+        if (qrcodeErr.length < 0) {
+            return;
+        }
+
+        if (qrcodeErr.attr("style").indexOf("display:none") < 0) {
+            window.location.replace(window.location.href);
+        }
+    })
+
+    repeat(() => {
         if (jQuery('[node-type="loginBtn"]').length <= 0) {
             return;
         }
