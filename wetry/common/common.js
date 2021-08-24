@@ -1,7 +1,8 @@
 //@ sourceURL=common.js
 
 var CUSTOM_COOKIE_PREFIX = "mapp_";
-var GO_FILE_PREFIX = "/gofile/" + new Date().getTime() + "/";
+// var GO_FILE_PREFIX = "/gofile/" + new Date().getTime() + "/";
+var GO_FILE_PREFIX = "https://gofile/";
 
 commonInit();
 
