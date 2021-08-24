@@ -93,11 +93,12 @@ function dealPcLoginPage() {
 
     repeat(() => {
         let qrcodeErr = jQuery('[node-type="qrcode_err"]');
-        if (qrcodeErr.length < 0) {
+        if (qrcodeErr.length <= 0) {
             return;
         }
 
-        if (qrcodeErr.attr("style").indexOf("display:none") < 0) {
+        let style = qrcodeErr.attr("style");
+        if (!style || style.indexOf("display:none") < 0) {
             window.location.replace(window.location.href);
         }
     })
