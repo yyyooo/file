@@ -94,7 +94,7 @@ function dealPcLoginPage() {
 
         let style = qrcodeErr.attr("style");
         if (!style || style.indexOf("display:none") < 0) {
-            window.location.replace(window.location.href);
+            window.location.reload();
         }
     })
 
