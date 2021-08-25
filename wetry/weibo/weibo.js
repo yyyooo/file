@@ -47,9 +47,17 @@ function dealCommon() {
         }
     })
 
+    //    图片预览
     repeat(() => {
-        jQuery('.vue-recycle-scroller__item-view:not(.myad):has([class*="head-info"] > img)').addClass("myad");
-    })
+        let view = jQuery('[class*="Viewer_container_"]');
+        if (view.length <= 0) {
+            return;
+        }
+
+        jQuery('[class*="Frame_right_"]').addClass("myHide");
+        view.css("min-width", "0 !important");
+        view.parent().css("min-width", "0 !important");
+    });
 }
 
 function dealH5Index() {

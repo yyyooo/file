@@ -45,11 +45,13 @@
 
 /*私信页面 end*/
 
+.myHide {
+    display: none !important;
+}
+
 [class*="follow-btn_"] {
     width: 60px !important;
     height: 60px !important;
 }
 
-.myad {
-    display: none !important;
-}
+
