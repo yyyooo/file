@@ -50,8 +50,18 @@
 }
 
 [class*="follow-btn_"] {
-    width: 60px !important;
-    height: 60px !important;
+    width: 65px !important;
+    height: 65px !important;
 }
+
+[class*="Frame_main_"] [class*="Bar_main_"] [class*="Bar_mid_"] {
+    display: none !important;
+}
+
+[class*="ProfileHeader_box"] [class*="ProfileHeader_item"] {
+    margin: 0 0 80px !important;
+}
+
+
 
 
