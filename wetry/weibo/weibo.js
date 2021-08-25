@@ -55,8 +55,12 @@ function dealCommon() {
         }
 
         jQuery('[class*="Frame_right_"]').addClass("myHide");
-        view.css("min-width", "0 !important");
-        view.parent().css("min-width", "0 !important");
+        let img = view.find('.imgInstance img');
+        img.css("width", "100%");
+        img.css("height", "auto");
+
+        view.css("min-width", "0");
+        view.parent().css("min-width", "0");
     });
 }
 
