@@ -54,7 +54,12 @@ function dealCommon() {
             return;
         }
 
-        jQuery('[class*="Frame_right_"]').addClass("myHide");
+        let right = jQuery('[class*="Frame_right_"]');
+        if (right.hasClass("myHide")) {
+            reutrn;
+        }
+        right.addClass("myHide");
+
         let img = view.find('.imgInstance img');
         img.css("width", "100%");
         img.css("height", "auto");
