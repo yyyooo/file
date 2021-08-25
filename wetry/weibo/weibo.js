@@ -24,7 +24,7 @@ function dealCommon() {
     }
 
     if (window.location.href.startsWith("https://api.weibo.com/chat")) {
-        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.45,maximum-scale=5");
+        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.45,maximum-scale=0.45");
         return;
     }
 
