@@ -66,6 +66,7 @@ function dealCommon() {
 
         view.css("min-width", "0");
         view.parent().css("min-width", "0");
+        view.parent().parent().css("min-width", "0");
     });
 }
 
