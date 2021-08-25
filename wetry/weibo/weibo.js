@@ -56,7 +56,7 @@ function dealCommon() {
 
         let right = jQuery('[class*="Frame_right_"]');
         if (right.hasClass("myHide")) {
-            reutrn;
+            return;
         }
         right.addClass("myHide");
 
