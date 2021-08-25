@@ -46,6 +46,10 @@ function dealCommon() {
             sideMenu.attr("style", "display: none;");
         }
     })
+
+    repeat(() => {
+        jQuery('.vue-recycle-scroller__item-view:not(.myad):has([class*="head-info"] > img)').addClass("myad");
+    })
 }
 
 function dealH5Index() {

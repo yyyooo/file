@@ -44,3 +44,12 @@
 }
 
 /*私信页面 end*/
+
+[class*="follow-btn_"] {
+    width: 55px !important;
+    height: 55px !important;
+}
+
+.myad {
+    display: none !important;
+}
