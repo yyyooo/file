@@ -97,7 +97,7 @@ function removeCookie(name) {
     Cookies.remove(name);
 
     let hosts = window.location.host.split(".");
-    for (let i = 1; i < hosts.length - 1; i++) {
+    for (let i = 0; i < hosts.length - 1; i++) {
         let ancestorDomain = hosts.slice(i).join(".");
         Cookies.remove(name, {domain: ancestorDomain})
     }
