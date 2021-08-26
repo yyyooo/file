@@ -99,7 +99,13 @@ function dealH5Index() {
 }
 
 function dealPcLoginPage() {
-    if (!window.location.href.startsWith("https://weibo.com/overseas?mylogin") && !window.location.href.startsWith("https://weibo.com/login.php")) {
+    if (!window.location.href.startsWith("https://weibo.com") || jQuery('[node-type="loginBtn"]').length <= 0) {
+        return;
+    }
+
+    if (Cookies.get('SSOLoginState')) {
+        removeCookie('SSOLoginState');
+        window.location.replace("https://m.weibo.cn");
         return;
     }
 
