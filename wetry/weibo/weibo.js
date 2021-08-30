@@ -151,7 +151,8 @@ function dealPcLoginPage() {
             '如果Wetry app和Weibo app在同一部手机上打开，<br/>' +
             '先把Wetry app的二维码截图，<br/>' +
             '然后当你打开Weibo app并扫描二维码时，<br/>' +
-            '选择图库中的二维码截图进行扫码。</div>')
+            '选择图库中的二维码截图进行扫码。<br/>' +
+            '<u><a href="https://yyyooo.github.io/wetry%20vi/Wetry-Ch%C3%A0o-th%E1%BA%BF-gi%E1%BB%9Bi!/">查看更多注册登录教程</a><u></div>')
         return true;
     }, 300)
 }
@@ -203,11 +204,10 @@ function dealH5LoginPage() {
 
     jQuery('.box-bottom').attr('style', 'color: grey;')
     jQuery('.box-bottom').html(
-        '由于微博限制部分非中国手机号，<br/><br/>' +
         '最好通过微博app扫码登录，<br/><br/>' +
         '而微博app建议通过Wechat登录，<br/><br/>' +
         '因为Wechat支持海外手机注册。<br/><br/>' +
-        '或者用你的中国、香港、澳门手机号在此页面注册登录。<br/>');
+        '<u><a href="https://yyyooo.github.io/wetry%20vi/Wetry-Ch%C3%A0o-th%E1%BA%BF-gi%E1%BB%9Bi!/">查看更多注册登录教程</a><u>');
 }
 
 function isLoginPage() {
