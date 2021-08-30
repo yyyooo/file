@@ -87,7 +87,7 @@ function dealSignin() {
         '由于知乎限制部分非中国手机号的注册，<br/><br/>' +
         '最好通过Wechat直接扫码登录（选取图片库扫码会登录失败），<br/><br/>' +
         '目前微博登录方式可能失败。<br/><br/>' +
-        '<u><a style="color:#175199" href="https://yyyooo.github.io/wetry%20vi/Wetry-Ch%C3%A0o-th%E1%BA%BF-gi%E1%BB%9Bi!/">查看更多注册登录教程 <span class="notranslate">https://yyyooo.github.io/pages/wetry/vi/list/</span></a></u>' +
+        '<u><a style="color:#175199" href="https://yyyooo.github.io/wetry%20vi/Wetry-Ch%C3%A0o-th%E1%BA%BF-gi%E1%BB%9Bi!/">查看更多注册登录教程<span class="notranslate">(https://yyyooo.github.io/pages/wetry/vi/list/</span></a></u>)' +
         '</div>');
 }
 
