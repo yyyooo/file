@@ -152,7 +152,7 @@ function dealPcLoginPage() {
             '先把Wetry app的二维码截图，<br/>' +
             '然后当你打开Weibo app并扫描二维码时，<br/>' +
             '选择图库中的二维码截图进行扫码。<br/>' +
-            '<u><a style="color:#175199" href="https://yyyooo.github.io/wetry%20vi/Wetry-Ch%C3%A0o-th%E1%BA%BF-gi%E1%BB%9Bi!/">查看更多注册登录教程</a></u></div>')
+            '<u><a style="color:#175199" href="https://yyyooo.github.io/wetry%20vi/Wetry-Ch%C3%A0o-th%E1%BA%BF-gi%E1%BB%9Bi!/">查看更多注册登录教程 <span class="notranslate">https://yyyooo.github.io/pages/wetry/vi/list/</span></a></u></div>')
         return true;
     }, 300)
 }
@@ -207,7 +207,7 @@ function dealH5LoginPage() {
         '最好通过微博app扫码登录，<br/><br/>' +
         '而微博app建议通过Wechat登录，<br/><br/>' +
         '因为Wechat支持海外手机注册。<br/><br/>' +
-        '<u><a style="color:#175199" href="https://yyyooo.github.io/wetry%20vi/Wetry-Ch%C3%A0o-th%E1%BA%BF-gi%E1%BB%9Bi!/">查看更多注册登录教程</a></u>');
+        '<u><a style="color:#175199" href="https://yyyooo.github.io/wetry%20vi/Wetry-Ch%C3%A0o-th%E1%BA%BF-gi%E1%BB%9Bi!/">查看更多注册登录教程 <span class="notranslate">https://yyyooo.github.io/pages/wetry/vi/list/</span></a></u>');
 }
 
 function isLoginPage() {
