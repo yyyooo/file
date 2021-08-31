@@ -92,7 +92,7 @@ function dealH5Index() {
         jQuery('.login-btn').attr("id", "mLoginBtn");
         jQuery('.login-btn').text("扫码登录/注册")
         jQuery('.login-btn').click(() => {
-            window.location.href = "https://weibo.com/overseas?mylogin";
+            window.location.href = "https://weibo.com/login.php";
         });
     });
 }
@@ -195,7 +195,7 @@ function dealH5LoginPage() {
     jQuery('.code-text').click(() => mouseDownByDoc(".box-select"));
     jQuery('.select-icon').click(() => mouseDownByDoc(".box-select"));
 
-    jQuery('.box-center a').attr('href', 'https://weibo.com/overseas?mylogin');
+    jQuery('.box-center a').attr('href', 'https://weibo.com/login.php');
     jQuery('.box-center a').text('通过微博app扫码登录');
     jQuery('.box-bottom').attr('style', 'font-size: large;')
 
