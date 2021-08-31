@@ -77,13 +77,12 @@ function dealH5Index() {
 
     repeat(() => {
             if (jQuery("#app .empty_failed").length > 0) {
+                removeCookie('_T_WM');
                 window.location.replace("https://m.weibo.cn/");
                 return;
             }
         }, () => jQuery(".weibo-text").length > 0
     )
-
-    repeat(() => hideCookie('_T_WM'), () => jQuery(".lite-iconf-profile").length > 0);
 
     repeat(() => {
         if (jQuery('#mLoginBtn').length > 0) {
@@ -111,7 +110,6 @@ function dealPcLoginPage() {
 
     jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.6,maximum-scale=5");
 
-    showCookie('_T_WM')
     addGoFileCss("weibo/weibo-login-pc.css");
 
     repeat(() => {
@@ -190,7 +188,6 @@ function dealH5LoginPage() {
     }
 
     addGoFileCss("weibo/weibo-login.css");
-    myDelay(() => showCookie('_T_WM'), 1500);
 
     //手机号无需翻译
     jQuery('.code-text').addClass('notranslate');
