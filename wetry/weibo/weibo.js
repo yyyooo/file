@@ -82,8 +82,8 @@ function dealH5Index() {
             }
         }, () => jQuery(".weibo-text").length > 0
     )
-//todo
-    // repeat(() => hideCookie('_T_WM'), () => jQuery(".lite-iconf-profile").length > 0);
+
+    repeat(() => hideCookie('_T_WM'), () => jQuery(".lite-iconf-profile").length > 0);
 
     repeat(() => {
         if (jQuery('#mLoginBtn').length > 0) {

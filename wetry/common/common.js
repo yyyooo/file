@@ -1,6 +1,7 @@
 //@ sourceURL=common.js
 
 var CUSTOM_COOKIE_PREFIX = "mapp_";
+var RENAME_COOKIE_PREFIX = "mrename_";
 var GO_FILE_PREFIX = "https://gofile.com/gofile/" + new Date().getTime() + "/";
 
 commonInit();
@@ -72,11 +73,11 @@ function afterUnregisterSw() {
 }
 
 function hideCookie(name, domain) {
-    renameCooke(name, CUSTOM_COOKIE_PREFIX + name, domain);
+    renameCooke(name, RENAME_COOKIE_PREFIX + name, domain);
 }
 
 function showCookie(name, domain) {
-    renameCooke(CUSTOM_COOKIE_PREFIX + name, name, domain);
+    renameCooke(RENAME_COOKIE_PREFIX + name, name, domain);
 }
 
 function renameCooke(fromName, toName, domain) {
