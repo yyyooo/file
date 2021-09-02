@@ -75,14 +75,16 @@ function dealH5Index() {
         return;
     }
 
+    jQuery('.nav_item > li:nth-child(6) span').click();
+
     repeat(() => {
             if (jQuery("#app .empty_failed").length > 0) {
                 removeCookie('_T_WM');
                 window.location.replace("https://m.weibo.cn/");
                 return;
             }
-        }, () => jQuery(".weibo-text").length > 0
-    )
+        }
+    );
 
     repeat(() => {
         if (jQuery('#mLoginBtn').length > 0) {
