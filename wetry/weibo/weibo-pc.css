@@ -62,6 +62,11 @@
     margin: 0 0 80px !important;
 }
 
+/*主页标签过长*/
+[class*="ProfileHeader_item"] {
+    display: none !important;
+}
+
 
 
 
