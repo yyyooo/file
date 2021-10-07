@@ -67,6 +67,11 @@
     display: none !important;
 }
 
+/*新主题对话框*/
+#app > .woo-box-alignCenter {
+    display: none !important;
+}
+
 
 
 
