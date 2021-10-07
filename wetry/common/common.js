@@ -34,7 +34,7 @@ function addCss(cssUrl) {
 }
 
 function clickByJQElement(e) {
-    e.dispatchEvent(newClickEvent())
+    e[0].dispatchEvent(newClickEvent())
 }
 
 function clickByDoc(selector) {
