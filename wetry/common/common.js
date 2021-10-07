@@ -33,11 +33,18 @@ function addCss(cssUrl) {
     jQuery("<link>").attr({rel: "stylesheet", type: "text/css", href: cssUrl}).appendTo("head");
 }
 
+function clickByJQElement(e) {
+    e.dispatchEvent(newClickEvent())
+}
 
 function clickByDoc(selector) {
+    jQuery(selector)[0].dispatchEvent(newClickEvent())
+}
+
+function newClickEvent() {
     let event = document.createEvent('HTMLEvents');
     event.initEvent('click', true, true);
-    jQuery(selector)[0].dispatchEvent(event)
+    return event;
 }
 
 function mouseDownByDoc(selector) {

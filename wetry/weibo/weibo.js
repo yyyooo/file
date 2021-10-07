@@ -64,7 +64,7 @@ function dealPc() {
                 continue;
             }
 
-            jQuery(dialogs[i]).find(".woo-button-main").hide();
+            clickByJQElement(jQuery(dialogs[i]).find(".woo-button-main"));
         }
     });
 
