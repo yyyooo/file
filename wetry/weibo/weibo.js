@@ -28,6 +28,10 @@ function dealCommon() {
         return;
     }
 
+    dealPc();
+}
+
+function dealPc() {
     jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.7,maximum-scale=5");
     addGoFileCss("weibo/weibo-pc.css");
 
@@ -46,6 +50,23 @@ function dealCommon() {
             sideMenu.attr("style", "display: none;");
         }
     })
+
+    /*新主题对话框*/
+    repeat(() => {
+        let dialogs = jQuery('#app > .woo-box-alignCenter');
+        if (dialogs.length <= 0) {
+            return;
+        }
+
+
+        for (let i = 0; i < dialogs.length; i++) {
+            if (jQuery(dialogs[i]).text().indexOf("欢迎使用全新") < 0) {
+                continue;
+            }
+
+            jQuery(dialogs[1]).find(".woo-button-main").click();
+        }
+    });
 
     //    图片预览
     repeat(() => {
