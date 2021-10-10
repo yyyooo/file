@@ -32,7 +32,7 @@ function dealCommon() {
 }
 
 function dealPc() {
-    jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.68,maximum-scale=5");
+    jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.65,maximum-scale=5");
     addGoFileCss("weibo/weibo-pc.css");
 
     let logo = jQuery('[class*="Frame_top_"] a[class*="Nav_logo"]');
