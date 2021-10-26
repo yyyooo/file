@@ -31,6 +31,11 @@
     display: none !important;
 }
 
+/*搜索页面 视频媒体内容*/
+.media-video-a .thumbnail, .media-item-a {
+    width: 100% !important;
+}
+
 [class*="Ctrls_main_"] {
     width: 100% !important;
 }
