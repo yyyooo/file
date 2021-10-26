@@ -16,6 +16,16 @@
     width: 105px !important;
 }
 
+/*搜索页面 列表*/
+#pl_feed_main .main-full {
+    width: 100% !important;
+}
+
+/*搜索页面 右边栏*/
+#pl_feed_main .main-side {
+    display: none !important;
+}
+
 [class*="Ctrls_main_"] {
     width: 100% !important;
 }
