@@ -1,5 +1,5 @@
 [class*="Frame_side"], .m-main-nav {
-    width: 180px !important;
+    width: 30% !important;
 }
 
 [class*="Frame_side"] [class*="NavItem_icon_"], .m-main-nav [class*="NavItem_icon_"] {

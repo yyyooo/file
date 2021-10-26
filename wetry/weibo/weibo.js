@@ -46,8 +46,10 @@ function dealPc() {
         let sideMenu = jQuery('[class*="Frame_side"],.m-main-nav');
         if (sideMenu.attr("style")) {
             sideMenu.attr("style", null);
+            jQuery('#pl_feed_main').attr("style", "width: 70%;");
         } else {
             sideMenu.attr("style", "display: none;");
+            jQuery('#pl_feed_main').attr("style", null);
         }
     })
 
