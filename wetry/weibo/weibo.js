@@ -35,7 +35,7 @@ function dealPc() {
     jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.65,maximum-scale=5");
     addGoFileCss("weibo/weibo-pc.css");
 
-    let logo = jQuery('[class*="Frame_top_"] a[class*="Nav_logo"]');
+    let logo = jQuery('a[class*="Nav_logo"]');
     let logoParent = logo.parent();
     logoParent.prepend('<svg id="mMenuBtn" focusable="false" viewBox="0 0 24 24" style="width: 35px;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>');
     logo.remove();
