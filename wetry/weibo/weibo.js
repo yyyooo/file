@@ -179,7 +179,7 @@ function dealPcLoginPage() {
             '选择图库中的二维码截图进行扫码（每次都需要最新截图的二维码），<br/>' +
             '然后返回Wetry app。<br/>' +
             '<span style="color:#ff0000">（注意！用Weibo app扫二维码后，在此页面需要等待几秒）</span><br/>' +
-            '<u><a style="color:#175199" href="https://yyyooo.github.io/wetry%20vi/Wetry-Ch%C3%A0o-th%E1%BA%BF-gi%E1%BB%9Bi!/">查看更多注册登录教程<span class="notranslate">(https://yyyooo.github.io/pages/wetry/vi/list/)</span></a></u></div>')
+            '<u><a style="color:#175199" href="https://yyyooo.github.io/short.html?my_src=wetry_tutorial&id=helloviwetry">查看更多注册登录教程<span class="notranslate">(https://yyyooo.github.io/short.html?my_src=wetry_tutorial&id=helloviwetry)</span></a></u></div>')
         return true;
     }, 300)
 }
