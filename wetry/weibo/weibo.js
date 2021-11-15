@@ -123,6 +123,12 @@ function dealH5Index() {
 }
 
 function dealPcLoginPage() {
+    if (window.location.pathname.startsWith("/newlogin")) {
+        removeCookie('SSOLoginState');
+        window.location.replace("https://m.weibo.cn");
+        return;
+    }
+
     if (!window.location.href.startsWith("https://weibo.com") || jQuery('[node-type="loginBtn"]').length <= 0) {
         return;
     }
