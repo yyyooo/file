@@ -123,7 +123,7 @@ function dealH5Index() {
 }
 
 function dealPcLoginPage() {
-    if (window.location.pathname.startsWith("/newlogin")) {
+    if (window.location.href.startsWith("https://weibo.com/newlogin")) {
         removeCookie('SSOLoginState');
         window.location.replace("https://m.weibo.cn");
         return;
