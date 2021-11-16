@@ -165,7 +165,7 @@ function dealPcLoginPage() {
                     window.location.replace("https://weibo.com");
                 }
             }
-        );
+            , null, 300);
 
         //扫码后，提示失败。直接刷新就行，有可能成功
         repeat(() => {
