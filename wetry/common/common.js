@@ -112,12 +112,16 @@ function removeCookie(name) {
 }
 
 function repeat(r, until, interval) {
-    if (until && until()) {
-        return;
-    }
+    try {
+        if (until && until()) {
+            return;
+        }
 
-    if (r) {
-        r();
+        if (r) {
+            r();
+        }
+    } catch (e) {
+        console.log(e);
     }
 
     if (!interval) {

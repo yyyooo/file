@@ -209,6 +209,8 @@ function dealPcLoginPage() {
                 '<u><a style="color:#175199" href="https://yyyooo.github.io/short.html?my_src=wetry_tutorial&id=helloviwetry">查看更多注册登录教程<span class="notranslate">(https://yyyooo.github.io/short.html?my_src=wetry_tutorial&id=helloviwetry)</span></a></u></div>')
             return true;
         }, 300);
+
+        return true;
     });
 }
 
