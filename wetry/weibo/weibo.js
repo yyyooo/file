@@ -117,17 +117,17 @@ function dealH5Index() {
         jQuery('.login-btn').attr("id", "mLoginBtn");
         jQuery('.login-btn').text("扫码登录/注册")
         jQuery('.login-btn').click(() => {
-            window.location.href = "https://weibo.com/login.php";
+            window.location.href = "https://kefu.weibo.com/";
         });
     });
 }
 
 function dealPcLoginPage() {
-    // if (window.location.href.startsWith("https://weibo.com/newlogin")) {
-    //     removeCookie('SSOLoginState');
-    //     window.location.replace("https://m.weibo.cn");
-    //     return;
-    // }
+    if (window.location.href.startsWith("https://weibo.com/newlogin")) {
+        removeCookie('SSOLoginState');
+        window.location.replace("https://m.weibo.cn");
+        return;
+    }
 
     if (!window.location.href.startsWith("https://weibo.com") || jQuery('[node-type="loginBtn"]').length <= 0) {
         return;
@@ -143,6 +143,15 @@ function dealPcLoginPage() {
 
     addGoFileCss("weibo/weibo-login-pc.css");
 
+    //定时检查是否成功登录
+    repeat(() => {
+            if (Cookies.get('SSOLoginState')) {
+                window.location.replace("https://weibo.com");
+            }
+        }
+    );
+
+    //扫码后，提示失败。直接刷新就行，有可能成功
     repeat(() => {
         let qrcodeErr = jQuery('[node-type="qrcode_err"]');
         if (qrcodeErr.length <= 0) {
@@ -230,7 +239,7 @@ function dealH5LoginPage() {
     jQuery('.code-text').click(() => mouseDownByDoc(".box-select"));
     jQuery('.select-icon').click(() => mouseDownByDoc(".box-select"));
 
-    jQuery('.box-center a').attr('href', 'https://weibo.com/login.php');
+    jQuery('.box-center a').attr('href', 'https://kefu.weibo.com/');
     jQuery('.box-center a').text('通过微博app扫码登录');
     jQuery('.box-bottom').attr('style', 'font-size: large;')
 
