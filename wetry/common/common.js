@@ -116,7 +116,9 @@ function repeat(r, until, interval) {
         return;
     }
 
-    r();
+    if (r) {
+        r();
+    }
 
     if (!interval) {
         interval = 1000;

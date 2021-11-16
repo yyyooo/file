@@ -117,7 +117,7 @@ function dealH5Index() {
         jQuery('.login-btn').attr("id", "mLoginBtn");
         jQuery('.login-btn').text("扫码登录/注册")
         jQuery('.login-btn').click(() => {
-            window.location.href = "https://kefu.weibo.com/";
+            window.location.href = "https://kefu.weibo.com/?mlogin";
         });
     });
 }
@@ -129,74 +129,87 @@ function dealPcLoginPage() {
         return;
     }
 
-    if (!window.location.href.startsWith("https://kefu.weibo.com/") || jQuery('[node-type="loginBtn"]').length <= 0) {
-        return;
-    }
-
-    if (Cookies.get('SSOLoginState')) {
-        removeCookie('SSOLoginState');
-        window.location.replace("https://m.weibo.cn");
-        return;
-    }
-
-    jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.6,maximum-scale=5");
-
-    addGoFileCss("weibo/weibo-login-pc.css");
-
-    //定时检查是否成功登录
-    repeat(() => {
-            if (Cookies.get('SSOLoginState')) {
-                window.location.replace("https://weibo.com");
-            }
-        }
-    );
-
-    //扫码后，提示失败。直接刷新就行，有可能成功
-    repeat(() => {
-        let qrcodeErr = jQuery('[node-type="qrcode_err"]');
-        if (qrcodeErr.length <= 0) {
-            return;
-        }
-
-        let style = qrcodeErr.attr("style");
-        if (!style || style.indexOf("display:none") < 0) {
-            window.location.reload();
-        }
-    })
-
-    repeat(() => {
-        if (jQuery('[node-type="loginBtn"]').length <= 0) {
-            return;
-        }
-
-        clickByDoc('[node-type="loginBtn"]');
-    }, () => jQuery('.tab_bar [node-type="qrcode_tab"]').length > 0, 300)
-
-    repeat(() => {
-        if (jQuery('.tab_bar [node-type="qrcode_tab"]').length <= 0) {
-            return;
-        }
-
-        clickByDoc('.tab_bar [node-type="qrcode_tab"]');
-    }, () => {
-        let src = jQuery('.qrcode_con img').attr("src");
-        if (!(src && src.indexOf("//") > -1)) {
+    //等待页面加载完成
+    repeat(null, () => {
+        if (jQuery('#weibo_top_public').length <= 0) {
             return false;
         }
 
-        jQuery(".content").parent().attr("style", "top:100px");
+        let isLoginPage = window.location.href.startsWith("https://kefu.weibo.com/?mlogin");
+        if (jQuery('[node-type="loginBtn"]').length > 0) {
+            removeCookie('SSOLoginState');
 
-        jQuery('.W_tc').html('<br/><br/><u><a href="https://m.weibo.cn/login" style="color: #175199;font-size: x-large;">短信注册登录</a></u>');
-        jQuery('.W_tc').prepend('<div style="color: grey;text-align: start;font-size: small;">' +
-            '如果Wetry app和Weibo app在同一部手机上打开，<br/>' +
-            '先把Wetry app的二维码截图，<br/>' +
-            '然后当你打开Weibo app并扫描二维码时，<br/>' +
-            '选择图库中的二维码截图进行扫码（每次都需要最新截图的二维码），<br/>' +
-            '然后返回Wetry app。<br/>' +
-            '<span style="color:#ff0000">（注意！用Weibo app扫二维码后，在此页面需要等待几秒）</span><br/>' +
-            '<u><a style="color:#175199" href="https://yyyooo.github.io/short.html?my_src=wetry_tutorial&id=helloviwetry">查看更多注册登录教程<span class="notranslate">(https://yyyooo.github.io/short.html?my_src=wetry_tutorial&id=helloviwetry)</span></a></u></div>')
-        return true;
-    }, 300)
+            if (!isLoginPage) {
+                window.location.replace("https://m.weibo.cn");
+                return false;
+            }
+        } else {
+            if (isLoginPage) {
+                window.location.replace("https://weibo.com");
+            }
+
+            return true;
+        }
+
+        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.6,maximum-scale=5");
+
+        addGoFileCss("weibo/weibo-login-pc.css");
+
+        //定时检查是否成功登录
+        repeat(() => {
+                if (Cookies.get('SSOLoginState')) {
+                    window.location.replace("https://weibo.com");
+                }
+            }
+        );
+
+        //扫码后，提示失败。直接刷新就行，有可能成功
+        repeat(() => {
+            let qrcodeErr = jQuery('[node-type="qrcode_err"]');
+            if (qrcodeErr.length <= 0) {
+                return;
+            }
+
+            let style = qrcodeErr.attr("style");
+            if (!style || style.indexOf("display:none") < 0) {
+                window.location.reload();
+            }
+        })
+
+        repeat(() => {
+            if (jQuery('[node-type="loginBtn"]').length <= 0) {
+                return;
+            }
+
+            clickByDoc('[node-type="loginBtn"]');
+        }, () => jQuery('.tab_bar [node-type="qrcode_tab"]').length > 0, 300)
+
+        repeat(() => {
+            if (jQuery('.tab_bar [node-type="qrcode_tab"]').length <= 0) {
+                return;
+            }
+
+            clickByDoc('.tab_bar [node-type="qrcode_tab"]');
+        }, () => {
+            let src = jQuery('.qrcode_con img').attr("src");
+            if (!(src && src.indexOf("//") > -1)) {
+                return false;
+            }
+
+            jQuery(".content").parent().attr("style", "top:100px");
+
+            jQuery('.W_tc').html('<br/><br/><u><a href="https://m.weibo.cn/login" style="color: #175199;font-size: x-large;">短信注册登录</a></u>');
+            jQuery('.W_tc').prepend('<div style="color: grey;text-align: start;font-size: small;">' +
+                '如果Wetry app和Weibo app在同一部手机上打开，<br/>' +
+                '先把Wetry app的二维码截图，<br/>' +
+                '然后当你打开Weibo app并扫描二维码时，<br/>' +
+                '选择图库中的二维码截图进行扫码（每次都需要最新截图的二维码），<br/>' +
+                '然后返回Wetry app。<br/>' +
+                '<span style="color:#ff0000">（注意！用Weibo app扫二维码后，在此页面需要等待几秒）</span><br/>' +
+                '<u><a style="color:#175199" href="https://yyyooo.github.io/short.html?my_src=wetry_tutorial&id=helloviwetry">查看更多注册登录教程<span class="notranslate">(https://yyyooo.github.io/short.html?my_src=wetry_tutorial&id=helloviwetry)</span></a></u></div>')
+            return true;
+        }, 300);
+    });
 }
 
 function checkLoginPage() {
@@ -239,7 +252,7 @@ function dealH5LoginPage() {
     jQuery('.code-text').click(() => mouseDownByDoc(".box-select"));
     jQuery('.select-icon').click(() => mouseDownByDoc(".box-select"));
 
-    jQuery('.box-center a').attr('href', 'https://kefu.weibo.com/');
+    jQuery('.box-center a').attr('href', 'https://kefu.weibo.com/?mlogin');
     jQuery('.box-center a').text('通过微博app扫码登录');
     jQuery('.box-bottom').attr('style', 'font-size: large;')
 
