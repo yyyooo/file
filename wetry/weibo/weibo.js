@@ -129,7 +129,7 @@ function dealPcLoginPage() {
         return;
     }
 
-    if (!window.location.href.startsWith("https://weibo.com") || jQuery('[node-type="loginBtn"]').length <= 0) {
+    if (!window.location.href.startsWith("https://kefu.weibo.com/") || jQuery('[node-type="loginBtn"]').length <= 0) {
         return;
     }
 
