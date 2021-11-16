@@ -94,7 +94,11 @@ function dealPc() {
 }
 
 function dealH5Index() {
-    if (window.location.href != "https://m.weibo.cn/") {
+    if (window.location.host != "m.weibo.cn") {
+        return;
+    }
+
+    if (window.location.pathname != "/") {
         return;
     }
 
