@@ -200,7 +200,7 @@ function dealPcLoginPage() {
                 return false;
             }
 
-            jQuery(".content").parent().attr("style", "top:100px");
+            jQuery(".content").parent().attr("style", "top:50px");
 
             jQuery('.W_tc').html('<br/><br/><u><a href="https://m.weibo.cn/login" style="color: #175199;font-size: x-large;">短信注册登录</a></u>');
             jQuery('.W_tc').prepend('<div style="color: grey;text-align: start;font-size: small;">' +
