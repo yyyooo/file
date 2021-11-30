@@ -42,6 +42,26 @@ function dealPc() {
 
     myDelay(() => jQuery('[class*="Frame_side"],.m-main-nav').attr("style", "display: none;"));
 
+    //如果没关注，就去热门
+    if (window.location.href === "https://weibo.com/") {
+        repeat(null, () => {
+            if (window.location.href != "https://weibo.com/") {
+                return true;
+            }
+
+            if (jQuery("[class*='Home_feed'] article").length > 0) {
+                return true;
+            }
+
+            if (jQuery("[class*='Home_feed'] [class*='Scroll_empty']").length > 0) {
+                window.location.replace("https://weibo.com/hot/weibo/1028034288");
+                return true;
+            }
+
+            return false;
+        })
+    }
+
     jQuery('#mMenuBtn').click(() => {
         let sideMenu = jQuery('[class*="Frame_side"],.m-main-nav');
         if (sideMenu.attr("style")) {
