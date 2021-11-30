@@ -49,15 +49,16 @@ function dealPc() {
                 return true;
             }
 
-            if (jQuery("[class*='Home_feed']").length <= 0) {
-                return false;
+            if (jQuery("[class*='Home_feed'] article").length > 0) {
+                return true;
             }
 
-            if (jQuery("[class*='Home_feed'] article").length <= 0) {
+            if (jQuery("[class*='Home_feed'] [class*='Scroll_empty']").length > 0) {
                 window.location.replace("https://weibo.com/hot/weibo/1028034288");
+                return true;
             }
 
-            return true;
+            return false;
         })
     }
 
