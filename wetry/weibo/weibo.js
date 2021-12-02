@@ -207,7 +207,7 @@ function dealPcLoginPage() {
             }
 
             clickByDoc('[node-type="loginBtn"]');
-        }, () => jQuery('.tab_bar [node-type="qrcode_tab"]').length > 0, 500)
+        }, () => jQuery('.tab_bar [node-type="qrcode_tab"]').length > 0, 600)
 
         repeat(() => {
             if (jQuery('.tab_bar [node-type="qrcode_tab"]').length <= 0) {
