@@ -162,10 +162,10 @@ function dealPcLoginPage() {
 
         let isLoginPage = window.location.href.startsWith("https://kefu.weibo.com/?mlogin");
         if (jQuery('[node-type="loginBtn"]').length > 0) {
-            removeCookie('SSOLoginState');
 
             if (!isLoginPage) {
                 window.location.replace("https://m.weibo.cn");
+                removeCookie('SSOLoginState');
                 return false;
             }
         } else {
