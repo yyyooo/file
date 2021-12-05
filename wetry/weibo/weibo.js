@@ -230,7 +230,7 @@ function dealPcLoginPage() {
                 '然后当你打开Weibo app并扫描二维码时，<br/>' +
                 '选择图库中的二维码截图进行扫码（每次都需要最新截图的二维码），<br/>' +
                 '然后返回Wetry app。<br/>' +
-                '<span style="color:#ff0000">（注意！用Weibo app扫二维码后，在此页面需要等待几秒）</span><br/>' +
+                '（注意！用Weibo app扫二维码后，然后返回Wetry app ，<span style="color:#ff0000">需要在此页面等待一段时间，就会自动登录</span>）<br/>' +
                 '<u><a style="color:#175199" href="https://yyyooo.github.io/short.html?my_src=wetry_tutorial&id=helloviwetry">查看更多注册登录教程<span class="notranslate">(https://yyyooo.github.io/short.html?my_src=wetry_tutorial&id=helloviwetry)</span></a></u></div>')
             return true;
         }, 300);
