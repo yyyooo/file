@@ -199,13 +199,13 @@ function dealPcLoginPage() {
 
         jQuery('.W_tc').html('<br/><br/><u><a href="https://m.weibo.cn/login" style="color: #175199;font-size: x-large;">短信注册登录</a></u>');
         jQuery('.W_tc').prepend('<div style="color: grey;text-align: start;font-size: small;">'+
-            '如果有两台手机，请用另外一台手机的Weibo app扫这个二维码<br/><br/>' +
-            '如果Wetry app和Weibo app在同一部手机上打开，<br/>' +
-            '先把Wetry app的二维码截图，<br/>' +
-            '然后当你打开Weibo app并扫描二维码时，<br/>' +
-            '选择图库中的二维码截图进行扫码（每次都需要最新截图的二维码），<br/>' +
-            '然后返回Wetry app。<br/>' +
-            '（注意！你返回Wetry app后，<span style="color:#ff0000">你需要在此页面等待一段时间，就会自动登录</span>）<br/>' +
+            '<span style="font-size: medium;">如果有两台手机，请用另外一台手机的Weibo app扫这个二维码</span><br/><br/>' +
+            '* 如果Wetry app和Weibo app在同一部手机上打开<br/>' +
+            '* 先把Wetry app的二维码截图<br/>' +
+            '* 然后当你打开Weibo app并扫描二维码时<br/>' +
+            '* 选择图库中的二维码截图进行扫码（每次都需要最新截图的二维码）<br/>' +
+            '* 然后返回Wetry app<br/>' +
+            '（注意！你返回Wetry app后，<span style="color:#ff0000">你需要在此页面等待一段时间，然后就会自动登录</span>）<br/><br/>' +
             '<u><a style="color:#175199" href="https://yyyooo.github.io/short.html?my_src=wetry_tutorial&id=helloviwetry">查看更多注册登录教程<span class="notranslate">(https://yyyooo.github.io/short.html?my_src=wetry_tutorial&id=helloviwetry)</span></a></u></div>')
         return true;
     }, 300)
