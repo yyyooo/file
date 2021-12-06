@@ -32,7 +32,7 @@ function dealCommon() {
 }
 
 function dealPc() {
-    if (window.screen.width / window.screen.height >= 9.0 / 16) {
+    if (window.screen.width / window.screen.height >= 3.0 / 5) {
         jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.8,maximum-scale=5,user-scalable=yes");
     } else {
         jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.65,maximum-scale=5,user-scalable=yes");
