@@ -22,9 +22,9 @@ function dealCommon() {
 
     let pathname = window.location.pathname;
     if (pathname.startsWith("/people/")) {
-        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.35,maximum-scale=5");
+        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.35,maximum-scale=5,user-scalable=true");
     } else {
-        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.85,maximum-scale=5");
+        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.85,maximum-scale=5,user-scalable=true");
     }
 }
 

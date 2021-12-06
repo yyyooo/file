@@ -1,5 +1,21 @@
+/*首页左边侧边栏*/
 [class*="Frame_side"], .m-main-nav {
     width: 30% !important;
+}
+
+/*首页中间*/
+[class*='Frame_content_'] {
+	max-width: 11122px !important;
+	width: 100% !important;
+}
+[class*='Main_full_'] {
+	width: 100% !important;
+
+}
+
+/*首页右边侧边栏*/
+[class*='Main_side_'] {
+	display: none !important;
 }
 
 [class*="Frame_side"] [class*="NavItem_icon_"], .m-main-nav [class*="NavItem_icon_"] {
