@@ -119,22 +119,23 @@ function dealPc() {
 }
 
 function dealH5Index() {
-    if (window.location.host != "m.weibo.cn") {
-        return;
-    }
-
-    if (window.location.pathname != "/") {
+    if (!isH5Index()) {
         return;
     }
 
     jQuery('.nav_item > li:nth-child(6) span').click();
 
     repeat(() => {
-            if (jQuery("#app .empty_failed").length > 0) {
-                removeCookie('_T_WM');
-                window.location.replace("https://m.weibo.cn/");
+            if (!isH5Index()) {
                 return;
             }
+
+            if (jQuery("#app .empty_failed").length <= 0) {
+                return;
+            }
+
+            removeCookie('_T_WM');
+            window.location.replace("https://m.weibo.cn/");
         }
     );
 
@@ -149,6 +150,10 @@ function dealH5Index() {
             window.location.href = "https://kefu.weibo.com/?mlogin";
         });
     });
+}
+
+function isH5Index() {
+    return window.location.host === "m.weibo.cn" && window.location.pathname === "/";
 }
 
 function dealPcLoginPage() {
