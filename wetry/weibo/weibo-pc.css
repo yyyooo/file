@@ -8,9 +8,11 @@
 	max-width: 11122px !important;
 	width: 100% !important;
 }
+[class*='Frame_main_'] {
+    width: 100% !important;
+}
 [class*='Main_full_'] {
-	width: 100% !important;
-
+    width: 100% !important;
 }
 
 /*首页右边侧边栏*/
