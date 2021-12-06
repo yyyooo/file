@@ -32,7 +32,11 @@ function dealCommon() {
 }
 
 function dealPc() {
-    jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.65,maximum-scale=5,user-scalable=yes");
+    if (window.screen.width / window.screen.height >= 9.0 / 16) {
+        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.8,maximum-scale=5,user-scalable=yes");
+    } else {
+        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.65,maximum-scale=5,user-scalable=yes");
+    }
     addGoFileCss("weibo/weibo-pc.css");
 
     let logo = jQuery('[class*="Frame_top_"] a[class*="Nav_logo"],#searchapps a[class*="Nav_logo"]');
