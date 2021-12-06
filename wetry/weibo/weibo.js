@@ -24,7 +24,7 @@ function dealCommon() {
     }
 
     if (window.location.href.startsWith("https://api.weibo.com/chat")) {
-        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.45,maximum-scale=0.45,user-scalable=true");
+        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.45,maximum-scale=0.45,user-scalable=yes");
         return;
     }
 
@@ -32,7 +32,11 @@ function dealCommon() {
 }
 
 function dealPc() {
-    jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.65,maximum-scale=5,user-scalable=true");
+    if (window.screen.width / window.screen.height > 9.0 / 16) {
+        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.8,maximum-scale=5,user-scalable=yes");
+    } else {
+        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.65,maximum-scale=5,user-scalable=yes");
+    }
     addGoFileCss("weibo/weibo-pc.css");
 
     let logo = jQuery('[class*="Frame_top_"] a[class*="Nav_logo"],#searchapps a[class*="Nav_logo"]');
@@ -176,7 +180,7 @@ function dealPcLoginPage() {
             return true;
         }
 
-        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.6,maximum-scale=5,user-scalable=true");
+        jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.75,maximum-scale=5,user-scalable=yes");
 
         addGoFileCss("weibo/weibo-login-pc.css");
 
