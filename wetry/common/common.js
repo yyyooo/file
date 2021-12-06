@@ -137,5 +137,5 @@ function dealQQLogin() {
         return;
     }
 
-    jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.75,maximum-scale=5");
+    jQuery("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.75,maximum-scale=5,user-scalable=true");
 }
