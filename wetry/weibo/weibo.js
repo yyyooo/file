@@ -95,6 +95,15 @@ function dealPc() {
         }
     });
 
+    repeat(() => {
+        let view = jQuery('.ariaicon-exit');
+        if (view.length <= 0) {
+            return;
+        }
+
+        view.click();
+    });
+
     //    图片预览
     repeat(() => {
         let view = jQuery('[class*="Viewer_container_"]');

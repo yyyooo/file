@@ -23,6 +23,11 @@
     display: none !important;
 }
 
+/*无障碍按键隐藏*/
+#cniil_wza {
+    display: none !important;
+}
+
 /*!*登录按键隐藏*!*/
 /*.login-box{*/
 /*    display: none !important;*/
