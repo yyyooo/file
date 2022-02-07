@@ -1,4 +1,4 @@
-//@ sourceURL=zhihu.js
+//@ sourceURL=douyin.js
 
 douyinInit();
 
