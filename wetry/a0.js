@@ -16,7 +16,7 @@ function translateSwitch() {
     }
 }
 
-jQuery("<link>").attr({rel: "stylesheet", type: "text/css", href: GO_FILE_PREFIX + "b0.css"}).appendTo("head");
-jQuery("<link>").attr({rel: "stylesheet", type: "text/css", href: GO_FILE_PREFIX + "b1.css"}).appendTo("head");
+addGoFileCss("b0.css");
+addGoFileCss("b1.css");
 
 jQuery("<script>").attr({src: GO_FILE_PREFIX + "b0.js"}).appendTo("body");

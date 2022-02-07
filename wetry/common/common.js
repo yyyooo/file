@@ -26,7 +26,7 @@ function isEmpty(obj) {
 }
 
 function addGoFileCss(cssUrl) {
-    jQuery("<link>").attr({rel: "stylesheet", type: "text/css", href: GO_FILE_PREFIX + cssUrl}).appendTo("head");
+    addCss(GO_FILE_PREFIX + cssUrl);
 }
 
 function addCss(cssUrl) {

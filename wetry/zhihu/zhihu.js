@@ -14,11 +14,7 @@ function zhihuInit() {
 }
 
 function dealCommon() {
-    jQuery("<link>").attr({
-        rel: "stylesheet",
-        type: "text/css",
-        href: GO_FILE_PREFIX + "zhihu/zhihu.css"
-    }).appendTo("head");
+    addGoFileCss("zhihu/zhihu.css");
 
     let pathname = window.location.pathname;
     if (pathname.startsWith("/people/")) {
