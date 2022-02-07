@@ -104,6 +104,9 @@
     display: none !important;
 }
 
-
+/*无障碍按键隐藏*/
+#cniil_wza {
+    display: none !important;
+}
 
 
