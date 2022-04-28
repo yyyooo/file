@@ -22,9 +22,10 @@
     display: none !important;
 }
 
-[node-type="login_frame"] {
-    display: none !important;
-}
+/*账号密码输入*/
+/*[node-type="login_frame"] {*/
+/*    display: none !important;*/
+/*}*/
 
 [class*='layer_login_register_'] .tab_bar {
     display: none !important;
@@ -34,11 +35,20 @@
     display: none !important;
 }
 
+.Bv6_layer {
+    left: 5% !important;
+    right: 5% !important;
+}
+
 [class*="layer_login_register_"] {
-    height: 850px !important;
+    height: 1000px !important;
 }
 
 .qrcode_con {
     height: 260px !important;
     margin-top: 0 !important;
+}
+
+[node-type="qq_box"] {
+    display: none !important;
 }

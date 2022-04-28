@@ -241,8 +241,8 @@ function dealPcLoginPage() {
 
             jQuery(".content").parent().attr("style", "top:50px");
 
-            jQuery('.W_tc').html('<br/><br/><u><a href="https://m.weibo.cn/login" style="color: #175199;font-size: x-large;">短信注册登录</a></u>');
-            jQuery('.W_tc').prepend('<div style="color: grey;text-align: start;font-size: medium;">' +
+            jQuery('[node-type="qrcode_frame"] .W_tc').html('<br/><br/><u><a href="https://m.weibo.cn/login" style="color: #175199;font-size: x-large;">短信注册登录</a></u>');
+            jQuery('[node-type="qrcode_frame"] .W_tc').prepend('<div style="color: grey;text-align: start;font-size: medium;">' +
                 '如果有两台手机，请用另外一台手机的Weibo app扫这个二维码<br/><br/>' +
                 '* 如果Wetry app和Weibo app在同一部手机上打开<br/>' +
                 '* 先把Wetry app的二维码截图<br/>' +

@@ -1,3 +1,22 @@
 .skiptranslate {
     display: none
 }
+
+.web-login-container {
+    width: 100% !important;
+}
+
+#login-pannel {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.box-align-center {
+    width: 100% !important;
+    height: 800px !important;
+}
+
+div[class*="qrcode-wrapper"] {
+    width: 450px !important;
+    height: 450px !important;
+}
