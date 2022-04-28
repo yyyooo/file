@@ -31,6 +31,11 @@
 /*    display: none !important;*/
 /*}*/
 
+/*账号登录的 注册按键和短信登录*/
+.form_login_register .W_tc {
+    display: none !important;
+}
+
 [class*="layer_login_register_"] > img[src*="rs.sinajs.cn/xdht.gif"] {
     display: none !important;
 }
