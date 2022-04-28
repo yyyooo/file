@@ -46,7 +46,7 @@
 }
 
 [class*="layer_login_register_"] {
-    height: 1000px !important;
+    height: 900px !important;
 }
 
 .qrcode_con {
