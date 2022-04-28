@@ -27,9 +27,9 @@
 /*    display: none !important;*/
 /*}*/
 
-[class*='layer_login_register_'] .tab_bar {
-    display: none !important;
-}
+/*[class*='layer_login_register_'] .tab_bar {*/
+/*    display: none !important;*/
+/*}*/
 
 [class*="layer_login_register_"] > img[src*="rs.sinajs.cn/xdht.gif"] {
     display: none !important;
