@@ -232,6 +232,7 @@ function dealPcLoginPage() {
                 return;
             }
 
+            jQuery(".form_login_register[node-type='login_frame']").prepend("<span>请输入 账号名 或 电子邮箱 或 手机号</span>");
             clickByDoc('.tab_bar [node-type="qrcode_tab"]');
         }, () => {
             let src = jQuery('.qrcode_con img').attr("src");
