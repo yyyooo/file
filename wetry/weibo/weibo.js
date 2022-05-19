@@ -41,7 +41,7 @@ function dealPc() {
 
     let logo = jQuery('[class*="Frame_top_"] a[class*="Nav_logo"],#searchapps a[class*="Nav_logo"]');
     let logoParent = logo.parent();
-    logoParent.prepend('<svg id="mMenuBtn" focusable="false" viewBox="0 0 24 24" style="width: 35px;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>');
+    logoParent.prepend('<svg id="mMenuBtn" focusable="false" viewBox="0 0 24 24" style="width: 35px;fill: #ff8600;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>');
     logo.remove();
 
     myDelay(() => jQuery('[class*="Frame_side"],.m-main-nav').attr("style", "display: none;"));
