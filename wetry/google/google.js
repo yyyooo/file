@@ -24,5 +24,5 @@ function getRlt(translator) {
     }
 
     //bing 翻译
-    clickByDoc("#tta_copyIcon");
+    jQuery("#tta_copyIcon").click();
 }
