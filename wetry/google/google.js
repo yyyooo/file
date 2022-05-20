@@ -25,5 +25,4 @@ function getRlt(translator) {
 
     //bing 翻译
     jQuery("#tta_copyIcon").click();
-    return "";
 }
