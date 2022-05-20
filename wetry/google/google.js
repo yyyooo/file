@@ -1,6 +1,6 @@
 //@ sourceURL=google.js
 
-function toCn(src, from, translator) {
+function toCn(translator, src, from) {
     if (translator == null || translator == "google") {
         window.location.href = "https://translate.google.com.vn/?sl=" + from + "&tl=zh-CN&text=" + src;
         return;
@@ -9,7 +9,7 @@ function toCn(src, from, translator) {
     window.location.href = "https://www.bing.com/translator?from=" + from + "&to=zh-Hans&text=" + src;
 }
 
-function fromCn(src, to, translator) {
+function fromCn(translator, src, to) {
     if (translator == null || translator == "google") {
         window.location.href = "https://translate.google.com.vn/?sl=zh-CN&tl=" + to + "&text=" + src;
         return;
