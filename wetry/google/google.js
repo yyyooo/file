@@ -28,5 +28,5 @@ function getRlt(translator) {
     }
 
     //bing 翻译
-    jQuery("#tta_copyIcon").click();
+    myDelay(() => jQuery("#tta_copyIcon").click(), 50);
 }
