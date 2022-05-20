@@ -1,5 +1,9 @@
 //@ sourceURL=google.js
 
+function translateJsCheck() {
+    return true;
+}
+
 function toCn(translator, src, from) {
     if (translator == null || translator == "google") {
         window.location.href = "https://translate.google.com.vn/?sl=" + from + "&tl=zh-CN&text=" + src;
