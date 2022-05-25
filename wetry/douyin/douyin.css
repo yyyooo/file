@@ -23,15 +23,23 @@ div[class*="qrcode-wrapper"] {
 
 .xgplayer-playswitch-tab {
     width: 100px !important;
-    height: 150px !important;
+    height: 500px !important;
 }
 
 .xgplayer-playswitch-prev {
+    width: 100% !important;
+    height: 50% !important;
+}
+
+.xgplayer-playswitch-prev > svg {
     margin: auto !important;
-    position: relative !important;
 }
 
 .xgplayer-playswitch-next {
+    width: 100% !important;
+    height: 50% !important;
+}
+
+.xgplayer-playswitch-next > svg {
     margin: auto !important;
-    position: relative !important;
 }
