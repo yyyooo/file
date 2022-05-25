@@ -22,6 +22,7 @@ div[class*="qrcode-wrapper"] {
 }
 
 .xgplayer-playswitch-tab {
+    opacity: 0.3 !important;
     width: 100px !important;
     height: 500px !important;
 }
@@ -32,7 +33,7 @@ div[class*="qrcode-wrapper"] {
 }
 
 .xgplayer-playswitch-prev > svg {
-    margin: auto !important;
+    left: 35% !important;
 }
 
 .xgplayer-playswitch-next {
@@ -41,5 +42,6 @@ div[class*="qrcode-wrapper"] {
 }
 
 .xgplayer-playswitch-next > svg {
-    margin: auto !important;
+    left: 35% !important;
+    top: 85% !important;
 }
