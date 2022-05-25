@@ -22,7 +22,7 @@ div[class*="qrcode-wrapper"] {
 }
 
 .xgplayer-playswitch-tab {
-    opacity: 0.3 !important;
+    opacity: 0.5 !important;
     width: 100px !important;
     height: 500px !important;
 }
