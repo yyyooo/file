@@ -20,3 +20,18 @@ div[class*="qrcode-wrapper"] {
     width: 450px !important;
     height: 450px !important;
 }
+
+.xgplayer-playswitch-tab {
+    width: 100px !important;
+    height: 150px !important;
+}
+
+.xgplayer-playswitch-prev {
+    margin: auto !important;
+    position: relative !important;
+}
+
+.xgplayer-playswitch-next {
+    margin: auto !important;
+    position: relative !important;
+}
