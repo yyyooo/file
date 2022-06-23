@@ -3,8 +3,8 @@
 }
 
 /*播放器过宽*/
-.xgplayer-pc {
-    width: 95% !important;
+#slidelist {
+    min-width: 700px !important;
 }
 
 .web-login-container {
