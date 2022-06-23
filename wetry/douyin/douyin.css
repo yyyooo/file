@@ -2,6 +2,11 @@
     display: none
 }
 
+/*播放器过宽*/
+.xgplayer-pc {
+    width: 95% !important;
+}
+
 .web-login-container {
     width: 100% !important;
 }
